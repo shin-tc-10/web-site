@@ -1,0 +1,238 @@
+//-----------------------------------------------------
+// scss: 変数設定
+//-----------------------------------------------------
+
+// カンプ / コンテンツ幅の指定
+$sp-full-width: 390;    // スマホ用のカンプ幅
+$pc-full-width: 1400;    // PC用のカンプ幅
+$pc-content-width: 1200; // PC用のカンプのコンテンツ幅(ガイド線の幅)
+
+// ブレークポイント設定
+// スマホ: 
+//    0px ~ 768px未満 -> スマホ用のカンプをベースにvwで実装
+// タブレット: 
+//    768px ~ PCコンテンツ幅未満 -> PC用のカンプをベースにvwで実装。予算の多い案件ではタブレット用のカンプが提供される場合もある。
+// PC: 
+//    PCコンテンツ幅以上 -> PC用のカンプをベースにpx(rem)で実装
+$breakpoint-md: 768;
+$breakpoint-lg: $pc-content-width;
+
+// 本番用か否か？本番用の場合は1にする。
+// 0の場合はpxで出力される。パーフェクトピクセルで合わせる時に便利。
+$production: 1;
+
+//-----------------------------------------------------
+//    scss: ブレークポイント関数
+//-----------------------------------------------------
+
+$breakpoints: (
+    "md": "screen and (min-width: #{$breakpoint-md}px)",
+    "lg": "screen and (min-width: #{$breakpoint-lg}px)",
+) !default;
+
+@mixin mq($breakpoint: md) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
+
+//-----------------------------------------------------
+//    scss: 変換関数群
+//-----------------------------------------------------
+
+// SP用: vwへの変換
+@function vw($px) {
+    @if $production !=1 {
+        @return $px * 1px;
+    }
+
+    @return calc($px * 100vw / $sp-full-width);
+}
+
+// タブレット用: vwへの変換
+@function vwt($px) {
+    @if $production !=1 {
+        @return $px * 1px;
+    }
+
+    @return calc($px * 100vw / $pc-content-width);
+}
+
+// PC用: pxをremに変換
+@function px2Rem($px) {
+    @if $production !=1 {
+        @return $px * 1px;
+    }
+
+    @return calc($px / 16) * 1rem;
+}
+
+// PC用: pxをvwに変換
+// ヘッダーなどコンテンツ幅ベースではなくかんぷ幅ベースでvwを使いたい場合に使用。
+// あまり使わない。
+@function vwp($px) {
+    @if $production !=1 {
+        @return $px * 1px;
+    }
+
+    @return calc($px * 100vw / $pc-full-width);
+}
+
+/* 共通 */
+body {
+    margin: 0 auto;
+    // font-family: 'Noto Serif JP', serif;
+    font-family: "Noto Sans JP", sans-serif;
+
+    line-height: 1.75;
+    color: #333;
+}
+
+main {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+li {
+    list-style: none;
+}
+
+.image-star {
+    width: vw(37.31);
+    height: vw(46);
+    @include mq() {
+        width: vwt(49.59);
+        height: vwt(61.09);
+    }
+    @include mq(lg) {
+        width: px2Rem(49.59);
+        height: px2Rem(61.09);
+    }
+}
+
+// 変数
+@mixin dflex-space-between-align-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ヘッダー */
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    // background-color: #6f4444; // 判別するため TEST用
+    background-color: #fff;
+
+    &__container {
+        max-width: vw(358);
+        margin-inline: auto;
+        padding: vw(20) vw(4);
+        @include mq() {
+            max-width: vw(358);
+        }
+        @include mq(lg) {
+            max-width: vw(358);
+        }
+    }
+    &__content {
+        @include dflex-space-between-align-center;
+    }
+    &__image {
+        width: vw(197);
+        height: vw(23);
+        @include mq() {
+            width: vwt(263);
+            height: vwt(30);
+        }
+        @include mq(lg) {
+            width: px2Rem(263);
+            height: px2Rem(30);
+        }
+    }
+    &__hamburger {
+        width: vw(24);
+        height: vw(18);
+        cursor: pointer;
+        margin-left: auto;
+        @include mq() {
+            display: none;
+        }
+    }
+
+    &__hamburger--line {
+        display: block;
+        margin: 0 0 0.525rem 0;
+        height: 0.525rem;
+        background-color: #000;
+    }
+
+    &__sp-nav {
+        position: fixed;
+        top: 7rem;
+        right: -100%;
+        background-color: #005bac;
+        width: 100%;
+        font-size: 1.8rem;
+        height: 33.1rem;
+        padding: 2rem 2rem 3.2rem;
+        transition: right 0.3s;
+        z-index: 10;
+    }
+
+    &__pc-nav {
+        display: none;
+    }
+}
+
+.cover {
+    margin-top: vw(50);
+    padding: vw(22) 0 vw(56) 0;
+
+    &__container {
+        max-width: vw(358);
+        margin-inline: auto;
+    }
+    &__text {
+        display:flex;
+        justify-content: space-between;
+    }
+
+    &__title {
+        font-size: vw(28);
+        font-weight: bold;
+        margin-bottom: vw(15);
+        @include mq() {
+            font-size: vwt(40);
+        }
+        @include mq(lg) {
+            font-size: px2Rem(40);
+        }
+    }
+    &__description {
+        font-size: vw(15);
+        line-break: anywhere;
+        margin-bottom: vw(24.5);
+        @include mq() {
+            font-size: vwt(15);
+            margin-left: vwt(134);
+        }
+        @include mq(lg) {
+            font-size: px2Rem(15);
+            margin-left: vwt(134);
+        }
+    }
+}
+
