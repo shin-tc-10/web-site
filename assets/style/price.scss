@@ -1,0 +1,165 @@
+//-----------------------------------------------------
+// scss: 変数設定
+//-----------------------------------------------------
+
+// カンプ / コンテンツ幅の指定
+$sp-full-width: 390;    // スマホ用のカンプ幅
+$pc-full-width: 1400;    // PC用のカンプ幅
+$pc-content-width: 1240; // PC用のカンプのコンテンツ幅(ガイド線の幅)
+
+// ブレークポイント設定
+// スマホ: 
+//    0px ~ 768px未満 -> スマホ用のカンプをベースにvwで実装
+// タブレット: 
+//    768px ~ PCコンテンツ幅未満 -> PC用のカンプをベースにvwで実装。予算の多い案件ではタブレット用のカンプが提供される場合もある。
+// PC: 
+//    PCコンテンツ幅以上 -> PC用のカンプをベースにpx(rem)で実装
+$breakpoint-md: 768;
+$breakpoint-lg: $pc-content-width;
+
+// 本番用か否か？本番用の場合は1にする。
+// 0の場合はpxで出力される。パーフェクトピクセルで合わせる時に便利。
+$production: 1;
+
+//-----------------------------------------------------
+//    scss: ブレークポイント関数
+//-----------------------------------------------------
+
+$breakpoints: (
+    "md": "screen and (min-width: #{$breakpoint-md}px)",
+    "lg": "screen and (min-width: #{$breakpoint-lg}px)",
+) !default;
+
+@mixin mq($breakpoint: md) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
+
+//-----------------------------------------------------
+//    scss: 変換関数群
+//-----------------------------------------------------
+
+// SP用: vwへの変換
+@function vw($px) {
+    @if $production !=1 {
+        @return $px * 1px;
+    }
+
+    @return calc($px * 100vw / $sp-full-width);
+}
+
+// タブレット用: vwへの変換
+@function vwt($px) {
+    @if $production !=1 {
+        @return $px * 1px;
+    }
+
+    @return calc($px * 100vw / $pc-content-width);
+}
+
+// PC用: pxをremに変換
+@function px2Rem($px) {
+    @if $production !=1 {
+        @return $px * 1px;
+    }
+
+    @return calc($px / 16) * 1rem;
+}
+
+// PC用: pxをvwに変換
+// ヘッダーなどコンテンツ幅ベースではなくかんぷ幅ベースでvwを使いたい場合に使用。
+// あまり使わない。
+@function vwp($px) {
+    @if $production !=1 {
+        @return $px * 1px;
+    }
+
+    @return calc($px * 100vw / $pc-full-width);
+}
+
+/* 共通 */
+body {
+    margin: 0 auto;
+    // font-family: 'Noto Serif JP', serif;
+    font-family: "Noto Sans JP", sans-serif;
+
+    line-height: 1.75;
+    color: #333;
+}
+
+main {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+li {
+    list-style: none;
+}
+
+.text-en {
+    font-family: "Montserrat", sans-serif;
+    font-size: vw(16);
+    font-weight: 600;
+    color: #168352;
+    display: block;
+    @include mq() {
+        font-size: vwt(20);
+    }
+    @include mq(lg) {
+        font-size: px2Rem(20);
+    }
+}
+.text-jp {
+    font-size: vw(20);
+    font-weight: bold;
+    display: block;
+    @include mq() {
+        font-size: vwt(28);
+    }
+    @include mq(lg) {
+        font-size: px2Rem(28);
+    }
+}
+.heading {
+    line-height: 1.4;
+    text-align: center;
+    @include mq() {
+        line-height: 1.601;
+    }
+    @include mq(lg) {
+    }
+}
+.line-break {
+    display: inline-block;
+    &--disable {
+        @include mq() {
+            display: inline;
+        }
+    }
+}
+
+// 変数
+@mixin dflex-space-between-align-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.cover {
+    &__image {
+        width: vw(358);
+        height: vw(230)
+    }
+}

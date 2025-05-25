@@ -1,0 +1,84 @@
+@charset "UTF-8";
+/* 共通 */
+body {
+  margin: 0 auto;
+  font-family: "Noto Sans JP", sans-serif;
+  line-height: 1.75;
+  color: #333;
+}
+
+main {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #FFF;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+li {
+  list-style: none;
+}
+
+.text-en {
+  font-family: "Montserrat", sans-serif;
+  font-size: 4.1025641026vw;
+  font-weight: 600;
+  color: #168352;
+  display: block;
+}
+@media screen and (min-width: 768px) {
+  .text-en {
+    font-size: 1.6129032258vw;
+  }
+}
+@media screen and (min-width: 1240px) {
+  .text-en {
+    font-size: 1.25rem;
+  }
+}
+
+.text-jp {
+  font-size: 5.1282051282vw;
+  font-weight: bold;
+  display: block;
+}
+@media screen and (min-width: 768px) {
+  .text-jp {
+    font-size: 2.2580645161vw;
+  }
+}
+@media screen and (min-width: 1240px) {
+  .text-jp {
+    font-size: 1.75rem;
+  }
+}
+
+.heading {
+  line-height: 1.4;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .heading {
+    line-height: 1.601;
+  }
+}
+.line-break {
+  display: inline-block;
+}
+@media screen and (min-width: 768px) {
+  .line-break--disable {
+    display: inline;
+  }
+}
+
+.cover__image {
+  width: 91.7948717949vw;
+  height: 58.9743589744vw;
+}/*# sourceMappingURL=price.css.map */
