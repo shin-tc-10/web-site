@@ -111,18 +111,18 @@ li {
 .header__title {
   line-height: 0.7;
 }
-.header__image {
+.header__logo {
   width: 50.5128205128vw;
   height: 5.8974358974vw;
 }
 @media screen and (min-width: 768px) {
-  .header__image {
+  .header__logo {
     width: 21.2096774194vw;
     height: 2.4193548387vw;
   }
 }
 @media screen and (min-width: 1240px) {
-  .header__image {
+  .header__logo {
     width: 16.4375rem;
     height: 1.875rem;
   }
@@ -132,38 +132,49 @@ li {
   height: 100%;
   cursor: pointer;
   margin-left: auto;
-  padding-top: 1.358974359vw;
+  padding-top: 1.9487179487vw;
 }
 @media screen and (min-width: 768px) {
   .header__hamburger {
     display: none;
   }
 }
-.header__hamburger--line {
+.header__line {
   display: block;
   margin: 0 0 1.5897435897vw 0;
   height: 0.5128205128vw;
   background-color: #000;
 }
-.header__hamburger--line-third {
+.header__line-third {
   margin: 0 0 0 0;
 }
 .header__sp-nav {
+  text-align: center;
+  border-radius: 6.1538461538vw;
   position: fixed;
-  top: 7rem;
+  top: 15.8974358974vw;
   right: -100%;
-  background-color: #005bac;
+  max-width: 91.7948717949vw;
+  background-color: #168352;
   width: 100%;
-  font-size: 1.8rem;
-  height: 33.1rem;
-  padding: 2rem 2rem 3.2rem;
+  font-size: 4.6153846154vw;
   transition: right 0.3s;
   z-index: 10;
+  padding: 5.641025641vw;
 }
 @media screen and (min-width: 768px) {
   .header__sp-nav {
     display: none;
   }
+}
+.header__active {
+  right: 4.1025641026vw;
+}
+.header__sp-list {
+  padding: 3.0769230769vw 0;
+}
+.header__sp-list--first {
+  padding-right: 1.5384615385vw;
 }
 .header__pc-nav {
   display: none;
@@ -173,23 +184,29 @@ li {
     display: block;
   }
 }
-.header__pc-nav-ul {
+.header__pc-ul {
   display: flex;
   gap: calc(t33 * 100vw / 390);
   font-size: 4.6153846154vw;
   font-weight: bold;
 }
 @media screen and (min-width: 768px) {
-  .header__pc-nav-ul {
+  .header__pc-ul {
     font-size: 1.2903225806vw;
     gap: 2.6612903226vw;
   }
 }
 @media screen and (min-width: 1240px) {
-  .header__pc-nav-ul {
+  .header__pc-ul {
     font-size: 1rem;
     gap: 2.0625rem;
   }
+}
+.header__pc-link {
+  color: #000;
+}
+.header__pc-link:hover {
+  color: #0056b3;
 }
 
 .cover {
@@ -483,12 +500,13 @@ li {
 }
 .features__item {
   border-radius: 6.1538461538vw;
-  box-shadow: 0px 1.0256410256vw 2.5641025641vw rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0.2051282051vw 1.5384615385vw rgba(0, 0, 0, 0.25);
   margin-bottom: 5.5128205128vw;
   width: 91.7948717949vw;
 }
 @media screen and (min-width: 768px) {
   .features__item {
+    box-shadow: 0 0.064516129vw 0.4838709677vw rgba(0, 0, 0, 0.25);
     border-radius: 1.935483871vw;
     width: 29.7580645161vw;
     margin-bottom: 0;
@@ -496,6 +514,7 @@ li {
 }
 @media screen and (min-width: 1240px) {
   .features__item {
+    box-shadow: 0 0.05rem 0.375rem rgba(0, 0, 0, 0.25);
     border-radius: 1.5rem;
     width: 23.0625rem;
   }
@@ -522,6 +541,7 @@ li {
   }
 }
 
+/* 製品・サービス紹介 */
 .products-service {
   padding: 8.4615384615vw 0 8.8461538462vw 0;
 }
@@ -576,6 +596,7 @@ li {
   padding: 5.1282051282vw 5.8974358974vw;
   border-radius: 6.1538461538vw;
   margin-bottom: 5.1282051282vw;
+  color: #fff;
 }
 @media screen and (min-width: 768px) {
   .products-service__item {
@@ -620,6 +641,10 @@ li {
     margin-right: 0;
   }
 }
+.products-service__item:hover {
+  background-color: #dffaec;
+  color: #168352;
+}
 .products-service__image {
   width: 25.641025641vw;
   height: 25.641025641vw;
@@ -649,7 +674,6 @@ li {
   }
 }
 .products-service__description {
-  color: #fff;
   font-size: 4.6153846154vw;
   font-weight: bold;
   width: 46.1538461538vw;
@@ -726,20 +750,20 @@ li {
   }
 }
 .case__image {
-  border-radius: 6.1538461538vw 6.1538461538vw 0 0;
+  border-radius: 6.1538461538vw;
   width: 91.7948717949vw;
   height: 51.5384615385vw;
 }
 @media screen and (min-width: 768px) {
   .case__image {
-    border-radius: 1.935483871vw 1.935483871vw 0 0;
+    border-radius: 1.935483871vw;
     width: 29.7580645161vw;
     height: 18.2258064516vw;
   }
 }
 @media screen and (min-width: 1240px) {
   .case__image {
-    border-radius: 1.5rem 1.5rem 0 0;
+    border-radius: 1.5rem;
     width: 23.0625rem;
     height: 14.125rem;
   }
@@ -751,20 +775,17 @@ li {
   }
 }
 .case__item {
-  border-radius: 6.1538461538vw;
   margin-bottom: 4.8717948718vw;
   width: 91.7948717949vw;
 }
 @media screen and (min-width: 768px) {
   .case__item {
-    border-radius: 1.935483871vw;
     width: 29.7580645161vw;
     margin-bottom: 0;
   }
 }
 @media screen and (min-width: 1240px) {
   .case__item {
-    border-radius: 1.5rem;
     width: 23.0625rem;
   }
 }
@@ -779,7 +800,6 @@ li {
 }
 .case__description {
   padding: 2.0256410256vw 0 2.0256410256vw 0.4358974359vw;
-  border-radius: 0 0 6.1538461538vw 6.1538461538vw;
   font-size: 4.6153846154vw;
   font-weight: bold;
   color: #09947b;

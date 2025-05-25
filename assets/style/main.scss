@@ -183,7 +183,7 @@ li {
     &__title {
         line-height: 0.7;
     }
-    &__image {
+    &__logo {
         width: vw(197);
         height: vw(23);
         @include mq() {
@@ -200,13 +200,13 @@ li {
         height: 100%;
         cursor: pointer;
         margin-left: auto;
-        padding-top: vw(5.3);
+        padding-top: vw(7.6);
         @include mq() {
             display: none;
         }
     }
 
-    &__hamburger--line {
+    &__line {
         display: block;
         margin: 0 0 vw(6.2) 0;
         height: vw(2);
@@ -217,20 +217,31 @@ li {
     }
 
     &__sp-nav {
+        text-align: center;
+        border-radius: vw(24);
         position: fixed;
-        top: 7rem;
+        top: vw(62);
         right: -100%;
-        background-color: #005bac;
+        max-width: vw(358);
+        background-color: #168352;
         width: 100%;
-        font-size: 1.8rem;
-        height: 33.1rem;
-        padding: 2rem 2rem 3.2rem;
+        font-size: vw(18);
         transition: right 0.3s;
         z-index: 10;
+        padding: vw(22);
         @include mq() {
             display: none;
         }
         @include mq(lg) {
+        }
+    }
+    &__active {
+        right: vw(16);
+    }
+    &__sp-list {
+        padding: vw(12) 0;
+        &--first {
+            padding-right: vw(6);
         }
     }
 
@@ -240,7 +251,7 @@ li {
             display: block;
         }
     }
-    &__pc-nav-ul {
+    &__pc-ul {
         display: flex;
         gap: vw(t33);
         font-size: vw(18);
@@ -252,6 +263,12 @@ li {
         @include mq(lg) {
             font-size: px2Rem(16);
             gap: px2Rem(33);
+        }
+    }
+    &__pc-link {
+        color: #000;
+        &:hover {
+            color: #0056b3;
         }
     }
 }
@@ -482,15 +499,17 @@ li {
     }
     &__item {  
         border-radius: vw(24);
-        box-shadow: 0px vw(4) vw(10) rgba(0, 0, 0, 0.25); 
+        box-shadow: 0 vw(0.8) vw(6) rgba(0, 0, 0, 0.25); 
         margin-bottom: vw(21.5);
         width: vw(358);
         @include mq() {
+            box-shadow: 0 vwt(0.8) vwt(6) rgba(0, 0, 0, 0.25); 
             border-radius: vwt(24);
             width: vwt(369);
             margin-bottom: 0;
         }
         @include mq(lg) {
+            box-shadow: 0 px2Rem(0.8) px2Rem(6) rgba(0, 0, 0, 0.25); 
             border-radius: px2Rem(24);
             width: px2Rem(369);
         }
@@ -515,6 +534,7 @@ li {
     }
 }
 
+/* 製品・サービス紹介 */
 .products-service {
     padding: vw(33) 0 vw(34.5) 0;
         @include mq() {
@@ -558,6 +578,7 @@ li {
         padding: vw(20) vw(23);
         border-radius: vw(24);
         margin-bottom: vw(20);
+        color: #fff;
         @include mq() {
             width: vwt(525);
             padding: vwt(23) vwt(31);
@@ -595,6 +616,10 @@ li {
                 margin-right: 0;
             }
         }
+        &:hover {
+            background-color: #dffaec;
+            color: #168352;
+        }
     }
     &__image {
         width: vw(100);
@@ -619,7 +644,6 @@ li {
         }
     }
     &__description {
-        color: #fff;
         font-size: vw(18);
         font-weight: bold;
         width: vw(180);
@@ -678,16 +702,16 @@ li {
         }
     }
     &__image {
-        border-radius: vw(24) vw(24) 0 0;
+        border-radius: vw(24);
         width: vw(358);
         height: vw(201);
         @include mq() {
-            border-radius: vwt(24) vwt(24) 0 0;
+            border-radius: vwt(24);
             width: vwt(369);
             height: vwt(226);
         }
         @include mq(lg) {
-            border-radius: px2Rem(24) px2Rem(24) 0 0;
+            border-radius: px2Rem(24);
             width: px2Rem(369);
             height: px2Rem(226);
         }
@@ -701,16 +725,13 @@ li {
         }
     }
     &__item {  
-        border-radius: vw(24);
         margin-bottom: vw(19);
         width: vw(358);
         @include mq() {
-            border-radius: vwt(24);
             width: vwt(369);
             margin-bottom: 0;
         }
         @include mq(lg) {
-            border-radius: px2Rem(24);
             width: px2Rem(369);
         }
         &--second {
@@ -723,7 +744,6 @@ li {
     }
     &__description {
         padding: vw(7.9) 0 vw(7.9) vw(1.7);
-        border-radius: 0 0 vw(24) vw(24);
         font-size: vw(18);
         font-weight: bold;
         color: #09947b;
