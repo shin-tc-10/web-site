@@ -78,6 +78,10 @@ li {
   }
 }
 
+.cover {
+  padding: 5.1282051282vw 0;
+  margin-top: 16.1538461538vw;
+}
 .cover__image {
   width: 91.7948717949vw;
   height: 58.9743589744vw;

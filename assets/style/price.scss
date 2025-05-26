@@ -158,8 +158,12 @@ li {
 
 
 .cover {
+    padding: vw(20) 0;
+    margin-top: vw(63);
     &__image {
         width: vw(358);
         height: vw(230)
     }
+    
+
 }
