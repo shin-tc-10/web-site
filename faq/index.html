@@ -19,7 +19,6 @@
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" >
     <!-- CSS -->
     <link rel="stylesheet" href="/assets/style/main.css" >
-    <link rel="stylesheet" href="/assets/style/price.css" >
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -40,7 +39,7 @@
                 <div class="header__content">
                     <h1 class="header__title">
                         <a class="header__link" href="/">
-                            <img class="header__logo" src="/assets/image/header_logo.svg" alt="Kirameki Farm">
+                            <img class="header__logo" src="/assets/image/common/header_logo.svg" alt="Kirameki Farm">
                         </a>
                     </h1>
                     <!-- PCメニュー -->
@@ -78,73 +77,59 @@
                 </nav>
             </div>
         </header>
-        <section class="cover">
-            <div class="cover__container">
+
+
+        <section class="faq-cover">
+            <div class="faq-cover__container">
                 <picture>
-                    <source media="(min-width: 768px)" srcset="/assets/image/price/cover_01_pc.jpg" >
-                    <img class="cover__image" src="/assets/image/price/cover_01_sp.jpg">
+                    <source media="(min-width: 768px)" srcset="/assets/image/faq/cover_pc.jpg" >
+                    <img class="faq-cover__image" src="/assets/image/faq/cover_sp.jpg">
                 </picture>
-                <h1>
-                    価格・スペック
-                </h1>
-                <div>
-                    <span>トップ</span>
-                    <img src="/assets/image/price/cover_arrow_sp.png">
-                    <span>価格・スペック</span>
+                <h1 class="faq-cover__title">よくあるご質問</h1>
+                <nav class="faq-cover__breadcrumb">
+                    <ol class="faq-cover__ol">
+                        <li class="faq-cover__list">
+                            <a class="faq-cover__link" href="/">トップ</a>
+                        </li>
+                        <li class="faq-cover__list faq-cover__list--arrow"></li>
+                        <li class="faq-cover__list faq-cover__list--highlight">
+                            <span>よくあるご質問</span>
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <div class="faq">
+            <div class="faq__container">
+                <div class="faq__accordion">
+                    <div class="faq__accordion-trigger" role="button" tabindex="0" aria-expanded="false">
+                        <span class="faq__text-q faq__text">Q.</span>
+                        <div class="faq__item">
+                            <span class="faq__category">ご利用について</span>
+                            <span class="faq__question faq__text">農業用ドローンの主な用途は何ですか？</span>
+                        </div>
+                        <img src="/assets/image/faq/faq_minus_sp.png" class="faq__accordion-icon" alt="">
+                    </div>
+                    <div class="faq__accordion-content">
+                        <div class="faq__accordion-body">
+                            <span class="faq__answer faq__text">
+                                農業用ドローンは、作物の健康状態のモニタリング、除草剤・肥料等の散布、灌漑システムの管理など、農業生産の効率を向上させるために使用されます。
+                            </span>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </section>
-        <section class="gallery">
-            <h2>ギャラリー</h2>
-            <picture>
-                <source media="(min-width: 768px)" srcset="/assets/image/price/cover_02_pc.jpg" >
-                <img class="cover__image" src="/assets/image/price/cover_02_sp.jpg">
-            </picture>
-        </section>
-        <section class="features">
-            <h2>特長</h2>
-            <div>
-                <picture>
-                    <source media="(min-width: 768px)" srcset="/assets/image/price/cover_03_pc.jpg" >
-                    <img class="cover__image" src="/assets/image/price/cover_03_sp.jpg">
-                </picture>
-                <p>自動操縦が可能で、短時間で大量の農作物を監視、収穫、播種、散布などの作業ができます。</p>
-            </div>
-            <div>
-                <picture>
-                    <source media="(min-width: 768px)" srcset="/assets/image/price/cover_04_pc.jpg" >
-                    <img class="cover__image" src="/assets/image/price/cover_04_sp.jpg">
-                </picture>
-                <p>高精度のカメラやセンサーを搭載しており、正確な土壌・作物の情報を収集でき、水や肥料などの資源を適切に配分できます。</p>
-            </div>
-            <div>
-                <picture>
-                    <source media="(min-width: 768px)" srcset="/assets/image/price/cover_05_pc.jpg" >
-                    <img class="cover__image" src="/assets/image/price/cover_05_sp.jpg">
-                </picture>
-                <p>必要な場所にだけ肥料や農薬を散布することができます。これにより、農薬や肥料の過剰使用が抑えられ、環境負荷やコスト削減に繋がります。</p>
-                </div>
-        </section>
-        <section class="price">
-            <h2>メーカー希望小売価格</h2>
-            <p>¥550,000<span>（税込）</span></p>
-        </section>
-        <section class="spec">
-            <h2>スペック</h2>
-            <h3>機体</h3>
-            <table>
-                <tr></tr>
-            </table>
-        </section>
-        <div class="contact">
-            <a>お問い合わせ</a>
         </div>
+
+
         <footer class="footer">
             <div class="footer__container">
                 <nav class="footer__nav">
                     <ul class="footer__ul">
-                        <li class="footer__list"><a class="footer__link footer__link--first" href="#reason">価格・スペック</a></li>
-                        <li class="footer__list"><a class="footer__link footer__link--second" href="#choose">よくあるご質問</a></li>
+                        <li class="footer__list"><a class="footer__link footer__link--first" href="/price/">価格・スペック</a></li>
+                        <li class="footer__list"><a class="footer__link footer__link--second" href="/faq/">よくあるご質問</a></li>
                     </ul>
                 </nav>
             </div>

@@ -1,0 +1,168 @@
+@use '../common/common' as *;
+
+
+.faq-cover {
+    margin-top: vw(63);
+    padding: vw(20) 0 vw(53) 0;
+    @include mq() {
+        margin-top: vwt(114);
+        padding: vwt(34) 0 vwt(56) 0;
+    }
+    @include mq(lg) {
+        margin-top: px2Rem(114);
+        padding: px2Rem(34) 0 px2Rem(56) 0;
+    }
+    &__container {
+        max-width: vw(360);
+        margin-inline: auto;
+        @include mq() {
+            max-width: vwt(1200);
+        }
+        @include mq(lg) {
+            max-width: px2Rem(1200);
+        }
+    }
+    &__image {
+        width: vw(358);
+        height: vw(230);
+        margin-bottom: vw(17.8);
+    }
+    &__title {
+        font-size: vw(30);
+        font-weight: bold;
+        @include mq() {
+            font-size: vwt(36);
+        }
+        @include mq(lg) {
+            font-size: px2Rem(36);
+        }
+    }
+    &__ol {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        padding: 0;
+        margin-top: vw(15);
+        justify-content: end;
+        @include mq() {
+            margin-top: vwt(15);
+        }
+        @include mq(lg) {
+            margin-top: px2Rem(15);
+        }
+    }
+
+    &__link {
+        color: #000;
+        &:hover {
+            color: #0056b3;
+        }
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        font-size: vw(12);
+        @include mq() {
+            font-size: vwt(12);
+        }
+        @include mq(lg) {
+            font-size: px2Rem(12);
+        }
+        &--highlight {
+            font-weight: bold;
+            color: #168352;
+        }
+        &--arrow {
+            width: vw(5);
+            height: vw(10);
+            margin: 0 vw(7.3) 0 vw(6.5);
+            position: relative;
+            @include mq() {
+                width: vwt(5);
+                height: vwt(10);
+                margin: 0 vwt(7.3) 0 vwt(6.5);
+            }
+            @include mq(lg) {
+                width: px2Rem(5);
+                height: px2Rem(10);
+                margin: 0 px2Rem(7.3) 0 px2Rem(6.5);
+            }
+            &::after {
+                content: "";
+                background-image: url("/assets/image/price/cover_arrow_sp.png");
+                background-size: contain;
+                background-repeat: no-repeat;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+
+/* Q&A */
+.faq {
+
+    &__container {
+        max-width: vw(358);
+        margin-inline: auto;
+    }
+
+    &__accordion {
+        border: vw(1) solid #ccc;
+        border-radius: vw(16);
+        padding: vw(24);
+        margin-bottom: vw(24);
+    }
+
+
+    &__accordion-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+
+    &__accordion-content.open {
+        max-height: 500px;
+    }
+
+    &__accordion-trigger {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__text-q {
+        font-size: vw(24);
+        font-weight: bold;
+        color: #168352;
+        font-family: "Montserrat", sans-serif;
+    }
+
+    &__item {
+    }
+
+    &__category {
+        border-radius: vw(4);
+        border: 1px solid #168352;
+        font-size: vw(11);
+        padding: vw(6) vw(12);
+    }
+
+    &__text {
+        display: block;
+    }
+
+    &__question {
+        font-size: vw(16);
+        font-weight: bold;
+    }
+
+    &__accordion-icon {
+        height: vw(3);
+    }
+
+    &__answer {
+        font-size: vw(16);
+    }
+
+}

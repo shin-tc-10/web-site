@@ -9,4 +9,23 @@ $(document).ready(function () {
         // ハンバーガーメニューを非表示にする
         $('.header__sp-nav').removeClass('header__active');
     })
+    // よくあるご質問
+    $('.faq__accordion-trigger').each(function() {
+        $(this).on('click', function() {
+            const $button = $(this);
+            const $content = $button.next();
+            const isExpanded = $button.attr('aria-expanded') === 'true';
+            $button.attr('aria-expanded', !isExpanded);
+            $content.toggleClass('open');
+        });
+    });
+    const swiper = new Swiper('.swiper', {
+        direction: 'horizontal',
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            
+        },
+    });
+
 });

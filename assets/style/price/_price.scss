@@ -1,0 +1,416 @@
+@use '../common/common' as *;
+
+.header {
+    &__pc-link--first {
+        color: #168352;
+    }
+}
+
+.price-cover {
+    margin-top: vw(63);
+    padding: vw(20) 0 vw(26) 0;
+    @include mq() {
+        margin-top: vwt(114);
+        padding: vwt(37) 0 vwt(56) 0;
+    }
+    @include mq(lg) {
+        margin-top: px2Rem(114);
+        padding: px2Rem(37) 0 px2Rem(56) 0;
+    }
+    &__container {
+        max-width: vw(360);
+        margin-inline: auto;
+        @include mq() {
+            max-width: vwt(1200);
+        }
+        @include mq(lg) {
+            max-width: px2Rem(1200);
+        }
+    }
+    &__title {
+        font-size: vw(30);
+        font-weight: bold;
+        margin-top: vw(18.5);
+        @include mq() {
+            font-size: vwt(36);
+            margin-top: vwt(18.5);
+        }
+        @include mq(lg) {
+            font-size: px2Rem(36);
+            margin-top: px2Rem(18.5);
+        }
+    }
+    &__ol {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        padding: 0;
+        margin-top: vw(15);
+        justify-content: end;
+        @include mq() {
+            margin-top: vwt(15);
+        }
+        @include mq(lg) {
+            margin-top: px2Rem(15);
+        }
+    }
+
+    &__link {
+        color: #000;
+        &:hover {
+            color: #0056b3;
+        }
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        font-size: vw(12);
+        @include mq() {
+            font-size: vwt(12);
+        }
+        @include mq(lg) {
+            font-size: px2Rem(12);
+        }
+        &--highlight {
+            font-weight: bold;
+            color: #168352;
+        }
+        &--arrow {
+            width: vw(5);
+            height: vw(10);
+            margin: 0 vw(7.3) 0 vw(6.5);
+            position: relative;
+            @include mq() {
+                width: vwt(5);
+                height: vwt(10);
+                margin: 0 vwt(7.3) 0 vwt(6.5);
+            }
+            @include mq(lg) {
+                width: px2Rem(5);
+                height: px2Rem(10);
+                margin: 0 px2Rem(7.3) 0 px2Rem(6.5);
+            }
+            &::after {
+                content: "";
+                background-image: url("/assets/image/price/cover_arrow_sp.png");
+                background-size: contain;
+                background-repeat: no-repeat;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+
+/* ギャラリー */
+.price-gallery {
+    padding: 0 0 vw(51.5) 0;
+        @include mq() {
+            padding: 0 0 vwt(51.5) 0;
+        }
+        @include mq(lg) {
+            padding: 0 0 px2Rem(51.5) 0;
+        }
+    &__container {
+        // max-width: vw(358);
+        margin-inline: auto;
+        @include mq() {
+            max-width: vwt(800);
+        }
+        @include mq(lg) {
+            max-width: px2Rem(800);
+        }
+    }
+    &__image {
+        width: vw(358);
+        height: vw(237);
+    }
+}
+
+.swiper-slide {
+text-align: center;
+}
+
+
+.maker-price {
+    &__container {
+        max-width: vw(358);
+        margin-inline: auto;
+        @include mq() {
+            max-width: vwt(1200);
+        }
+        @include mq(lg) {
+            max-width: px2Rem(1200);
+        }
+    }
+}
+
+.price-spec {
+    &__container {
+        max-width: vw(358);
+        margin-inline: auto;
+        @include mq() {
+            max-width: vwt(800);
+        }
+        @include mq(lg) {
+            max-width: px2Rem(800);
+        }
+    }
+}
+
+.price-features {
+    padding: 0 0 vw(17.4) 0;
+        @include mq() {
+            padding: 0 0 vwt(17.4) 0;
+        }
+        @include mq(lg) {
+            padding: 0 0 px2Rem(17.4) 0;
+        }
+    &__container {
+        max-width: vw(358);
+        margin-inline: auto;
+        @include mq() {
+            max-width: vwt(800);
+        }
+        @include mq(lg) {
+            max-width: px2Rem(800);
+        }
+    }
+    &__items {
+        @include mq() {
+            display: flex;
+        }
+        @include mq(lg) {
+            display: flex;
+        }
+    }
+    &__item {
+        margin-bottom: vw(31.5);
+        @include mq() {
+            margin-bottom: vwt(31.5);
+        }
+        @include mq(lg) {
+            margin-bottom: px2Rem(31.5);
+        }
+    }
+    &__description {
+        font-size: vw(18);
+        font-weight: bold;
+        margin-top: vw(10);
+        line-break: anywhere;
+        max-width: vw(350);
+        @include mq() {
+            font-size: vwt(18);
+            max-width: vwt(350);
+            margin-top: vwt(10);
+        }
+        @include mq(lg) {
+            font-size: px2Rem(18);
+            max-width: px2Rem(350);
+            margin-top: px2Rem(10);
+        }
+    }
+}
+
+/* メーカー小売価格 */
+.price-manufacturer {
+    padding: 0 0 vw(41) 0;
+        @include mq() {
+            padding: 0 0 vwt(41) 0;
+        }
+        @include mq(lg) {
+            padding: 0 0 px2Rem(41) 0;
+        }
+    &__container {
+        max-width: vw(358);
+        margin-inline: auto;
+        @include mq() {
+            max-width: vwt(800);
+        }
+        @include mq(lg) {
+            max-width: px2Rem(800);
+        }
+    }
+    &__heading {
+        margin-bottom: vw(8.6);
+        @include mq() {
+            margin-bottom: vwt(8.6);
+        }
+        @include mq(lg) {
+            margin-bottom: px2Rem(8.6);
+        }
+    }
+    &__price {
+        font-size: vw(32);
+        font-weight: bold;
+        font-family: "Montserrat", sans-serif;
+        @include mq() {
+            font-size: vwt(32);
+        }
+        @include mq(lg) {
+            font-size: px2Rem(32);
+        }
+    }
+    &__tax {
+        font-size: vw(16);
+        @include mq() {
+            font-size: vwt(16);
+        }
+        @include mq(lg) {
+            font-size: px2Rem(16);
+        }
+    }
+}
+
+.price-spec {
+    padding: 0 0 vw(64) 0;
+        @include mq() {
+            padding: 0 0 vwt(64) 0;
+        }
+        @include mq(lg) {
+            padding: 0 0 px2Rem(64) 0;
+        }
+    &__container {
+        max-width: vw(358);
+        margin-inline: auto;
+        @include mq() {
+            max-width: vwt(800);
+        }
+        @include mq(lg) {
+            max-width: px2Rem(800);
+        }
+    }
+
+    &__heading {
+        margin-bottom: vw(23);
+        @include mq() {
+            margin-bottom: vwt(23);
+        }
+        @include mq(lg) {
+            margin-bottom: px2Rem(23);
+        }
+    }
+
+    &__detail {
+        @include mq() {
+            max-width: vwt(740);
+            margin-inline: auto;
+        }
+        @include mq(lg) {
+            max-width: px2Rem(740);
+        }
+    }
+
+    &__heading-three {
+        font-size: vw(20);
+        border-left: vw(2) solid #168352;
+        padding-left: vw(15.5);
+        margin-bottom: vw(18);
+        @include mq() {
+            font-size: vwt(20);
+            border-left: vwt(2) solid #168352;
+            padding-left: vwt(15.5);
+            margin-bottom: vwt(18);  
+        }
+        @include mq(lg) {
+            font-size: px2Rem(20);
+            border-left: px2Rem(2) solid #168352;
+            padding-left: px2Rem(15.5);
+            margin-bottom: px2Rem(18);
+        }
+    }
+
+    &__table {
+        width: 100%;
+        border-collapse: collapse;
+        border: vw(1) solid #ddd;
+        table-layout: fixed;
+        @include mq() {
+            border: vwt(1) solid #ddd;
+        }
+        @include mq(lg) {
+            border: px2Rem(1) solid #ddd;
+        }
+    }
+
+    &__th,
+    &__td {
+        border: vw(1) solid #ddd;
+        padding: vw(5) 0 vw(5) vw(19.3);
+        font-size: vw(16);
+        text-align: left;
+        @include mq() {
+            border: vwt(1) solid #ddd;
+            padding: vwt(5) 0 vwt(5) vwt(19.3);
+            font-size: vwt(16);
+        }
+        @include mq(lg) {
+            border: px2Rem(1) solid #ddd;
+            padding: px2Rem(5) 0 px2Rem(5) px2Rem(19.3);
+            font-size: px2Rem(16);
+        }
+    }
+
+    &__th {
+        background-color: #f5f5f5;
+        font-weight: bold;
+    }
+}
+
+/* お問い合わせ */
+.price-contact {
+    background-image: url("/assets/image/price/contact_sp.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: vw(360);
+    @include mq() {
+        background-image: url("/assets/image/price/contact_sp.jpg");
+        height: vwt(450);
+        padding: 0;
+        margin-top: 0;
+    }
+    @include mq(lg) {
+        height: px2Rem(450);
+    }
+    &__container {
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+    &__btn {
+        max-width: vw(358);
+        margin-inline: auto;
+        display: block;
+        width: 100%;
+        cursor: pointer;
+        padding: vw(20.3) 0;
+        color: #fff;
+        text-align: center;
+        background-color: transparent;
+        border: vw(2) solid #fff;
+        border-radius: vw(40);
+        font-size: vw(20);
+        font-weight: bold;
+        transition: background-color 0.3s, color 0.3s;
+        @include mq() {
+            max-width: vwt(358);
+            padding: vwt(20.3) 0;
+            border: vwt(2) solid #fff;
+            border-radius: vwt(40);
+            font-size: vwt(20);
+        }
+        @include mq(lg) {
+            max-width: px2Rem(358);
+            padding: px2Rem(20.3) 0;
+            border: px2Rem(2) solid #fff;
+            border-radius: px2Rem(40);
+            font-size: px2Rem(20);
+        }
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+    }
+}
