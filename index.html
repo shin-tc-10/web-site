@@ -44,8 +44,8 @@
                     <!-- PCメニュー -->
                     <nav class="header__pc-nav">
                         <ul class="header__pc-ul">
-                            <li><a class="header__pc-link" href="/price">価格・スペック</a></li>
-                            <li><a class="header__pc-link" href="/faq">よくあるご質問</a></li>
+                            <li class="header__pc-list header__pc-list--first"><a class="header__pc-link" href="/price">価格・スペック</a></li>
+                            <li class="header__pc-list header__pc-list--second"><a class="header__pc-link" href="/faq">よくあるご質問</a></li>
                         </ul>
                     </nav>
                     <div class="header__hamburger">
@@ -100,7 +100,7 @@
                 </h3>
                 <div class="about__content">
                     <div class="about__description">
-                        <p class="about__text--first">キラメキファームは、これからの農業を次世代の子どもたちに残すために創設されたイノベーションカンパニーです。</p>
+                        <p class="about__text--first"><span class="line-break about__line-break">キラメキファームは、これからの農業を</span><span class="line-break about__line-break">次世代の子どもたちに残すために</span><span class="line-break about__line-break">創設されたイノベーションカンパニーです。</span></p>
                         <p class="about__text--second">キラメキファームは革新的デザインと最新技術を活用した農業機器メーカーです。未来の農業を実現するために、ビッグデータを駆使して省エネルギー・効率化を実現し、自動運転技術を搭載したロボットで一年中稼働することができる機器を提供します。リジェネラティブ農業を実現する技術を用いて、持続可能な農業システムをサポートします。私たちの社是は、次世代の子供たちに豊かな地球環境を残すこと。イノベーションを起こすことで農業に新たな価値を生み出し、地球環境保全に貢献することを目指しています。</p>
                     </div>
                     <div class="about__image"></div>
@@ -133,7 +133,7 @@
                             <source media="(min-width: 768px)" srcset="/assets/image/top/features_03_pc.jpg">
                             <img class="features__image" src="/assets/image/top/features_03_sp.jpg">
                         </picture>
-                        <div class="features__description">自動運転技術を搭載したロボットで一年中稼働することができる</div>
+                        <div class="features__description features__description--third">自動運転技術を搭載したロボットで一年中稼働することができる</div>
                     </li>
                 </ul>
             </div>
@@ -152,8 +152,7 @@
                                 <img class="products-service__image products-service__image--first" src="/assets/image/top/products_service_01_sp.png">
                             </picture>
                             <div class="products-service__description">
-                                <span class="line-break">エネルギーセイバー</span>
-                                <span class="line-break">農業ドローン</span>
+                                <span class="line-break">エネルギーセイバー</span><span class="line-break">農業ドローン</span>
                             </div>
                         </a>
                     </li>
@@ -163,7 +162,9 @@
                                 <source media="(min-width: 768px)" srcset="/assets/image/top/products_service_02_pc.png">
                                 <img class="products-service__image products-service__image--second" src="/assets/image/top/products_service_02_sp.png">
                             </picture>
-                            <p class="products-service__description"><span class="line-break">プログレッシブ</span><span class="line-break">ハーベストボット</span></p>
+                            <div class="products-service__description products-service__description--second">
+                                <span class="line-break">プログレッシブ</span><span class="line-break">ハーベストボット</span>
+                            </div>
                         </a>
                     </li>
                     <li class="products-service__item products-service__item--small">
@@ -172,9 +173,8 @@
                                 <source media="(min-width: 768px)" srcset="/assets/image/top/products_service_03_pc.png">
                                 <img class="products-service__image products-service__image--small" src="/assets/image/top/products_service_03_sp.png">
                             </picture>
-                            <div class="products-service__description products-service__description--small">
-                                <span class="line-break line-break--disable">フューチャーファーム</span>
-                                <span class="line-break">マスター</span>
+                            <div class="products-service__description products-service__description--small products-service__description--third">
+                                <span class="line-break line-break--disable">フューチャーファーム</span><span class="line-break line-break--disable">マスター</span>
                             </div>
                         </a>
                     </li>
@@ -184,7 +184,9 @@
                                 <source media="(min-width: 768px)" srcset="/assets/image/top/products_service_04_pc.png">
                                 <img class="products-service__image products-service__image--small" src="/assets/image/top/products_service_04_sp.png">
                             </picture>
-                            <div class="products-service__description products-service__description--small">ミラクルグローアシスト</div>
+                            <div class="products-service__description products-service__description--small products-service__description--fourth">
+                                ミラクルグローアシスト
+                            </div>
                         </a>
                     </li>
                     <li class="products-service__item products-service__item--small products-service__item--fifth">
@@ -193,7 +195,9 @@
                                 <source media="(min-width: 768px)" srcset="/assets/image/top/products_service_05_pc.png">
                                 <img class="products-service__image products-service__image--small" src="/assets/image/top/products_service_05_sp.png">
                             </picture>
-                            <div class="products-service__description products-service__description--small">インテリジェントプランター</div>
+                            <div class="products-service__description products-service__description--small">
+                                インテリジェントプランター
+                            </div>
                         </a>
                     </li>
                 </ul>

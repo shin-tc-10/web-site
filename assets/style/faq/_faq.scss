@@ -5,11 +5,11 @@
     padding: vw(20) 0 vw(35) 0;
     @include mq() {
         margin-top: vwt(114);
-        padding: vwt(34) 0 vwt(56) 0;
+        padding: vwt(40) 0 vwt(56) 0;
     }
     @include mq(lg) {
         margin-top: px2Rem(114);
-        padding: px2Rem(34) 0 px2Rem(56) 0;
+        padding: px2Rem(40) 0 px2Rem(56) 0;
     }
     &__container {
         max-width: vw(360);
@@ -25,6 +25,14 @@
         width: vw(358);
         height: vw(230);
         margin-bottom: vw(17.8);
+        @include mq() {
+            width: vwt(1200);
+            height: vwt(550);
+        }
+        @include mq(lg) {
+            width: px2Rem(1200);
+            height: px2Rem(550);
+        }
     }
     &__title {
         font-size: vw(30);
@@ -37,7 +45,7 @@
         }
     }
     &__breadcrumb {
-        margin-top: vw(17);
+        margin-top: vw(16.61);
         @include mq() {
             margin-top: vwt(17);
         }
@@ -77,12 +85,12 @@
         &--arrow {
             &::after {
                 content: "";
-                background-image: url("/assets/image/price/cover_arrow_sp.png");
+                background-image: url("/assets/image/common/arrow.png");
                 background-size: contain;
                 background-repeat: no-repeat;
                 width: vw(5);
                 height: vw(10);
-                margin: 0 vw(7.3) 0 vw(6.5);
+                margin: 0 vw(7.3) 0 vw(7.1);
                 position: relative;
                 display: inline-block;
                 @include mq() {
@@ -102,17 +110,64 @@
 
 /* Q&A */
 .faq {
-    padding-bottom: vw(162.2);
+    padding-bottom: vw(147);
     &__container {
         max-width: vw(358);
         margin-inline: auto;
+        @include mq() {
+        }
+        @include mq(lg) {
+        }
     }
 
     &__accordion {
         border: vw(1) solid #ccc;
         border-radius: vw(16);
-        padding: vw(22) vw(24) vw(15) vw(23);
         margin-bottom: vw(24);
+
+        &--second {
+            padding-top: vw(22.78);
+        }
+        &--third {
+            padding-top: vw(22.78);
+        }
+        &--fourth {
+            padding-top: vw(23);
+        }
+        &--fifth {
+            padding-top: vw(23);
+            padding-bottom: vw(16.2);
+        }
+        &--sixth {
+            padding-top: vw(23);
+            padding-bottom: vw(16.3);
+        }
+        &--seventh {
+            padding-top: vw(23);
+            padding-bottom: vw(18.26);
+            padding-right: vw(19);
+        }
+        &--eighth {
+            padding-top: vw(23);
+            padding-bottom: vw(17.6);
+        }
+        &--ninth {
+            padding-top: vw(23);
+            padding-bottom: vw(16.3);
+        }
+        &--tenth {
+            padding-top: vw(23);
+        }
+        &--eleventh {
+            padding-top: vw(23);
+        }
+        &--tenth {
+            padding-bottom: vw(16.4);
+        }
+        &--eleventh {
+            padding-bottom: vw(16.8);
+        }
+
     }
 
 
@@ -126,9 +181,11 @@
         max-height: 500px;
     }
 
-    &__accordion-trigger {
+    &__accordion-q {
         display: flex;
         align-items: flex-start;
+        padding: vw(22.39) vw(24) vw(15) vw(23);
+        
     }
 
     &__text-q {
@@ -158,34 +215,82 @@
         width: vw(100);
         height: vw(24);
         color: #168352;
+        &--first {
+            margin-right: vw(8);
+        }
     }
 
-    .faq__category-first {
-        margin-right: vw(8);
-    }
-    &__accordion-icon {
-        margin-top: vw(11);
-        margin-left: auto;
-    }
-
+    
     &__text {
         display: block;
     }
-
+    
     &__question {
         font-size: vw(16);
         font-weight: bold;
-        padding: vw(1) vw(9) 0 vw(0.3) ;
+        padding: vw(1) vw(9) 0 vw(0.3);
+        &--fifth {
+            line-break: anywhere;
+        }
+        &--seventh {
+            line-break: anywhere;
+            padding-right: vw(14.85);
+        }
+        &--eighth {
+            line-break: anywhere;
+            padding-right: vw(14.85);
+        }
     }
-
+    
+    &__accordion-content {
+        padding: 0 vw(24) vw(15) vw(23);
+        
+    }
+    
     &__accordion-icon {
-        height: vw(3);
+        margin-left: auto;
     }
-
+    &__icon--plus {
+        height: vw(19);
+        width: vw(19);
+    }
+    &__icon--minus {
+        margin-top: vw(11);
+        height: vw(3);
+        width: vw(20);
+    }
+    
     &__answer {
         font-size: vw(16);
         padding: vw(1.6);
         line-break: anywhere;
+        &--fourth {
+            padding-left: vw(3.3)
+        }
+        &--fifth {
+            padding: 0 0 0 vw(3.2);
+        }
+        &--sixth {
+            padding: vw(1.4) 0 0 vw(3.7);
+        }
+        &--sixth {
+            padding: vw(1.8) 0 0 vw(3.4);
+        }
+        &--seventh {
+            padding: vw(0.4) 0 0 vw(3);
+        }
+        &--eighth {
+            padding: vw(1.5) 0 0 vw(3.6);
+        }
+        &--ninth {
+            padding: vw(0.5) 0 0 vw(3.4);
+        }
+        &--tenth {
+            padding: vw(1.6) 0 0 vw(4);
+        }
+        &--eleventh {
+            padding: vw(9.3) 0 0 vw(4.1);
+        }
     }
 
 }

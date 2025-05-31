@@ -10,15 +10,32 @@ $(document).ready(function () {
         $('.header__sp-nav').removeClass('header__active');
     })
     // よくあるご質問
-    $('.faq__accordion-trigger').each(function() {
-        // $(this).on('click', function() {
-            const $button = $(this);
-            const $content = $button.next();
-            const isExpanded = $button.attr('aria-expanded') === 'true';
-            $button.attr('aria-expanded', !isExpanded);
-            $content.toggleClass('open');
-        // });
-    });
+ $('.faq__accordion-q').on('click', function () {
+  const $trigger = $(this);
+  const $icon = $trigger.find('.faq__accordion-icon');
+  const $content = $trigger.next();
+  const isExpanded = $trigger.attr('aria-expanded') === 'true';
+
+  // アコーディオン切り替え
+  $trigger.attr('aria-expanded', !isExpanded);
+  $content.toggleClass('open');
+
+  // 画像とサイズクラスの切り替え
+  if (isExpanded) {
+    // 閉じる → プラス画像に
+    $icon
+      .attr('src', '/assets/image/faq/faq_plus_sp.png')
+      .removeClass('faq__icon--minus')
+      .addClass('faq__icon--plus');
+  } else {
+    // 開く → マイナス画像に
+    $icon
+      .attr('src', '/assets/image/faq/faq_minus_sp.png')
+      .removeClass('faq__icon--plus')
+      .addClass('faq__icon--minus');
+  }
+});
+
 
 
     const swiper = new Swiper('.swiper', {

@@ -5,33 +5,73 @@
     padding: vw(20) 0 vw(26) 0;
     @include mq() {
         margin-top: vwt(114);
-        padding: vwt(37) 0 vwt(56) 0;
+        padding: vwt(39) 0 vwt(47.4) 0;
     }
     @include mq(lg) {
         margin-top: px2Rem(114);
-        padding: px2Rem(37) 0 px2Rem(56) 0;
+        padding: px2Rem(39) 0 px2Rem(47.4) 0;
     }
     &__container {
         max-width: vw(360);
         margin-inline: auto;
         @include mq() {
-            max-width: vwt(1200);
+            max-width: vwt(1240);
+            position: relative;
+            text-align: center;
         }
         @include mq(lg) {
-            max-width: px2Rem(1200);
+            max-width: px2Rem(1240);
+        }
+    }
+    &__image {
+        @include mq() {
+            width: vwt(1200);
+            height: vwt(551);
+        }
+        @include mq(lg) {
+            width: px2Rem(1200);
+            height: px2Rem(551);
         }
     }
     &__title {
         font-size: vw(30);
         font-weight: bold;
         margin-top: vw(18.5);
+        padding: 0 0 0 vw(2);
         @include mq() {
             font-size: vwt(36);
             margin-top: vwt(18.5);
+            position: absolute;
+            bottom: vwt(35);
+            left: vwt(19.6);
+            border-radius: 0 vwt(40) 0 0;
+            background-color: #fff;
+            padding: vwt(23.2) vwt(34.4) vwt(31.8) vwt(40);
         }
         @include mq(lg) {
             font-size: px2Rem(36);
             margin-top: px2Rem(18.5);
+            bottom: px2Rem(35);
+            left: px2Rem(19.6);
+            border-radius: 0 px2Rem(40) 0 0;
+            padding: px2Rem(23.2) px2Rem(34.4) px2Rem(31.8) px2Rem(40);
+        }
+    }
+    &__text {
+        @include mq() {
+            letter-spacing: vwt(1);
+        }
+        @include mq(lg) {
+            letter-spacing: px2Rem(1);
+        }
+    }
+    &__breadcrumb {
+        margin-top: vw(16);
+        @include mq() {
+            margin: vwt(18.9) vwt(18.2) 0 0;
+        }
+        @include mq(lg) {
+            margin: px2Rem(18.9) px2Rem(18.2) 0 0;
         }
     }
     &__ol {
@@ -39,14 +79,7 @@
         align-items: center;
         list-style: none;
         padding: 0;
-        margin-top: vw(15);
         justify-content: end;
-        @include mq() {
-            margin-top: vwt(15);
-        }
-        @include mq(lg) {
-            margin-top: px2Rem(15);
-        }
     }
 
     &__link {
@@ -69,7 +102,7 @@
         &--arrow {
             &::after {
                 content: "";
-                background-image: url("/assets/image/price/cover_arrow_sp.png");
+                background-image: url("/assets/image/common/arrow.png");
                 background-size: contain;
                 background-repeat: no-repeat;
                 width: vw(5);
@@ -80,12 +113,12 @@
                 @include mq() {
                     width: vwt(5);
                     height: vwt(10);
-                    margin: 0 vwt(7.3) 0 vwt(6.5);
+                    margin: 0 vwt(7.1) 0 vwt(8.3);
                 }
                 @include mq(lg) {
                     width: px2Rem(5);
                     height: px2Rem(10);
-                    margin: 0 px2Rem(7.3) 0 px2Rem(6.5);
+                    margin: 0 px2Rem(7.1) 0 px2Rem(8.3);
                 }
             }
         }
@@ -95,12 +128,12 @@
 /* ギャラリー */
 .price-gallery {
     padding: 0 0 vw(51.5) 0;
-        @include mq() {
-            padding: 0 0 vwt(51.5) 0;
-        }
-        @include mq(lg) {
-            padding: 0 0 px2Rem(51.5) 0;
-        }
+    @include mq() {
+        padding: 0 0 vwt(59.5) 0;
+    }
+    @include mq(lg) {
+        padding: 0 0 px2Rem(59.5) 0;
+    }
     &__container {
         max-width: vw(358);
         margin-inline: auto;
@@ -109,6 +142,16 @@
         }
         @include mq(lg) {
             max-width: px2Rem(800);
+        }
+    }
+    &__heading {
+        @include mq() {
+            padding: 0 0 vwt(19) 0;
+            margin-bottom: vwt(32.3);
+        }
+        @include mq(lg) {
+            padding: 0 0 px2Rem(19) 0;
+            margin-bottom: px2Rem(32.3);
         }
     }
     &__image {
@@ -137,6 +180,17 @@
 
 .swiper-pagination-bullet-active {
     background-color: #168352;
+}
+
+.swiper-pagination-horizontal.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+        @include mq() {
+        bottom: vwt(14.1);
+        left: vwt(1.6);
+    }
+    @include mq(lg) {
+        bottom: px2Rem(14.1);
+        left: px2Rem(1.6);
+    }
 
 }
 
@@ -168,12 +222,12 @@
 }
 
 .price-features {
-    padding: 0 0 vw(17.4) 0;
+    padding: 0 0 vw(26) 0;
         @include mq() {
-            padding: 0 0 vwt(17.4) 0;
+            padding: 0 0 vwt(20.6) 0;
         }
         @include mq(lg) {
-            padding: 0 0 px2Rem(17.4) 0;
+            padding: 0 0 px2Rem(20.6) 0;
         }
     &__container {
         max-width: vw(358);
@@ -188,47 +242,78 @@
     &__items {
         @include mq() {
             display: flex;
+            justify-content: space-between;
+        }
+    }
+    &__image {
+        width: vw(358);
+        height: vw(200);
+        @include mq() {
+            width: vwt(246);
+            height: vwt(150);
         }
         @include mq(lg) {
-            display: flex;
+            width: px2Rem(246);
+            height: px2Rem(150);
+        }
+    }
+    &__heading {
+        @include mq() {
+            padding: 0 0 vwt(18) 0;
+            margin-bottom: vwt(33.3);
+        }
+        @include mq(lg) {
+            padding: 0 0 px2Rem(18) 0;
+            margin-bottom: px2Rem(33.3);
         }
     }
     &__item {
-        margin-bottom: vw(31.5);
+        margin-bottom: vw(33);
+        width: vw(358);
         @include mq() {
             margin-bottom: vwt(31.5);
+            width: vwt(358);
         }
         @include mq(lg) {
             margin-bottom: px2Rem(31.5);
+            width: px2Rem(358);
         }
     }
     &__description {
         font-size: vw(18);
         font-weight: bold;
-        margin-top: vw(10);
+        margin-top: vw(8.3);
         line-break: anywhere;
         max-width: vw(350);
         @include mq() {
             font-size: vwt(18);
             max-width: vwt(350);
-            margin-top: vwt(10);
+            margin-top: vwt(6.9);
         }
         @include mq(lg) {
             font-size: px2Rem(18);
             max-width: px2Rem(350);
-            margin-top: px2Rem(10);
+            margin-top: px2Rem(6.9);
+        }
+        &--second {
+            @include mq() {
+                letter-spacing: vwt(0.1);
+            }
+            @include mq(lg) {
+                letter-spacing: px2Rem(0.1);
+            }
         }
     }
 }
 
 /* メーカー小売価格 */
 .price-manufacturer {
-    padding: 0 0 vw(41) 0;
+    padding: 0 0 vw(42.3) 0;
         @include mq() {
-            padding: 0 0 vwt(41) 0;
+            padding: 0 0 vwt(48) 0;
         }
         @include mq(lg) {
-            padding: 0 0 px2Rem(41) 0;
+            padding: 0 0 px2Rem(48) 0;
         }
     &__container {
         max-width: vw(358);
@@ -243,10 +328,13 @@
     &__heading {
         margin-bottom: vw(8.6);
         @include mq() {
-            margin-bottom: vwt(8.6);
+            margin-bottom: vwt(16.6);
+            padding: 0 0 vwt(18.7) 0;
+
         }
         @include mq(lg) {
-            margin-bottom: px2Rem(8.6);
+            margin-bottom: px2Rem(16.6);
+            padding: 0 0 px2Rem(18.7) 0;
         }
     }
     &__price {
@@ -264,9 +352,11 @@
         font-size: vw(16);
         @include mq() {
             font-size: vwt(16);
+            padding: 0 0 0 vwt(1.3);
         }
         @include mq(lg) {
             font-size: px2Rem(16);
+            padding: 0 0 0 px2Rem(1.3);
         }
     }
 }
@@ -293,10 +383,12 @@
     &__heading {
         margin-bottom: vw(23);
         @include mq() {
-            margin-bottom: vwt(23);
+            margin-bottom: vwt(31.4);
+            padding: 0 0 vwt(20.2) 0;
         }
         @include mq(lg) {
-            margin-bottom: px2Rem(23);
+            margin-bottom: px2Rem(31.4);
+            padding: 0 0 px2Rem(20.2) 0;
         }
     }
 
@@ -312,20 +404,23 @@
 
     &__heading-three {
         font-size: vw(20);
+        font-weight: bold;
         border-left: vw(2) solid #168352;
         padding-left: vw(15.5);
-        margin-bottom: vw(18);
+        margin-bottom: vw(17.5);
+        line-height: 1.5;
         @include mq() {
-            font-size: vwt(20);
+            font-size: vwt(24);
             border-left: vwt(2) solid #168352;
-            padding-left: vwt(15.5);
-            margin-bottom: vwt(18);  
+            padding-left: vwt(17.3);
+            margin-bottom: vwt(22.8);
+            line-height: 1.7;
         }
         @include mq(lg) {
-            font-size: px2Rem(20);
+            font-size: px2Rem(24);
             border-left: px2Rem(2) solid #168352;
-            padding-left: px2Rem(15.5);
-            margin-bottom: px2Rem(18);
+            padding-left: px2Rem(17.3);
+            margin-bottom: px2Rem(22.8);
         }
     }
 
@@ -342,6 +437,14 @@
         }
     }
 
+    &__tr {
+        display: flex;
+        flex-direction: column;
+        @include mq() {
+            flex-direction: row;
+        }
+    }
+
     &__th,
     &__td {
         border: vw(1) solid #ddd;
@@ -350,15 +453,34 @@
         text-align: left;
         @include mq() {
             border: vwt(1) solid #ddd;
-            padding: vwt(5) 0 vwt(5) vwt(19.3);
+            padding: vwt(16.4) 0 vwt(17.5) vwt(17.7);
             font-size: vwt(16);
         }
         @include mq(lg) {
             border: px2Rem(1) solid #ddd;
-            padding: px2Rem(5) 0 px2Rem(5) px2Rem(19.3);
+            padding: px2Rem(16.4) 0 px2Rem(17.5) px2Rem(17.7);
             font-size: px2Rem(16);
         }
     }
+
+    &__th {
+        @include mq() {
+            width: vwt(266.5);
+        }
+        @include mq(lg) {
+            width: px2Rem(266.5);
+        }
+    }
+    &__td {
+        @include mq() {
+            width: 100%;
+            padding-left: vwt(22.5);
+        }
+        @include mq(lg) {
+            padding-left: px2Rem(22.5);
+        }
+    }
+    
 
     &__th {
         background-color: #f5f5f5;
@@ -374,7 +496,7 @@
     background-position: center center;
     height: vw(360);
     @include mq() {
-        background-image: url("/assets/image/price/contact_sp.jpg");
+        background-image: url("/assets/image/price/contact_pc.jpg");
         height: vwt(450);
         padding: 0;
         margin-top: 0;
@@ -394,7 +516,7 @@
         display: block;
         width: 100%;
         cursor: pointer;
-        padding: vw(20.3) 0;
+        padding: vw(20) 0 vw(21) 0;
         color: #fff;
         text-align: center;
         background-color: transparent;
@@ -405,17 +527,19 @@
         transition: background-color 0.3s, color 0.3s;
         @include mq() {
             max-width: vwt(358);
-            padding: vwt(20.3) 0;
+            padding: vwt(20.3) 0 vwt(22) 0;
             border: vwt(2) solid #fff;
             border-radius: vwt(40);
             font-size: vwt(20);
+            margin-bottom: vwt(1.1);
         }
         @include mq(lg) {
             max-width: px2Rem(358);
-            padding: px2Rem(20.3) 0;
+            padding: px2Rem(20.3) 0 px2Rem(22) 0;
             border: px2Rem(2) solid #fff;
             border-radius: px2Rem(40);
             font-size: px2Rem(20);
+            margin-bottom: px2Rem(1.1);
         }
         &:hover {
             background-color: #fff;

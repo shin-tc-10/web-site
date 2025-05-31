@@ -113,11 +113,14 @@ li {
     font-weight: 600;
     color: #168352;
     display: block;
+    margin-bottom: vw(1);
     @include mq() {
         font-size: vwt(20);
+        margin-bottom: vwt(1);
     }
     @include mq(lg) {
         font-size: px2Rem(20);
+        margin-bottom: px2Rem(1);
     }
 }
 .text-jp {
@@ -126,9 +129,11 @@ li {
     display: block;
     @include mq() {
         font-size: vwt(28);
+        padding-left: vwt(1.5);
     }
     @include mq(lg) {
         font-size: px2Rem(28);
+        padding-left: px2Rem(1.5);
     }
 }
 .heading {
@@ -136,8 +141,6 @@ li {
     text-align: center;
     @include mq() {
         line-height: 1.601;
-    }
-    @include mq(lg) {
     }
 }
 .price-heading {
@@ -158,9 +161,9 @@ li {
         margin-bottom: vwt(24);
         background-image: linear-gradient(
             to right,
-            #168352 0 vwt(50),
+            #168352 0 vwt(100),
             #ddd vwt(50) 100%);
-        background-size: 100% vwt(3);
+        background-size: 100% vwt(5);
     }
     @include mq(lg) {
         font-size: px2Rem(28);
@@ -168,9 +171,9 @@ li {
         margin-bottom: px2Rem(24);
         background-image: linear-gradient(
             to right,
-            #168352 0 px2Rem(50),
+            #168352 0 px2Rem(100),
             #ddd px2Rem(50) 100%);
-        background-size: 100% px2Rem(3);
+        background-size: 100% px2Rem(5);
     }
 }
 .line-break {
@@ -203,11 +206,11 @@ li {
         padding: vw(15) 0;
         @include mq() {
             max-width: vwt(1168);
-            padding: vwt(42) vwt(4);
+            padding: vwt(42) 0;
         }
         @include mq(lg) {
             max-width: px2Rem(1168);
-            padding: px2Rem(42) px2Rem(4);
+            padding: px2Rem(42) 0;
         }
     }
     &__content {
@@ -215,6 +218,12 @@ li {
     }
     &__title {
         line-height: 0.7;
+        @include mq() {
+            padding: 0 0 vwt(3.7) 0;
+        }
+        @include mq(lg) {
+            padding: 0 0 px2Rem(3.7) 0;
+        }
     }
     &__logo {
         width: vw(197);
@@ -281,7 +290,13 @@ li {
     &__pc-nav {
         display: none;
         @include mq() {
+            padding: 0 0 vwt(6) 0;
+            // margin: 0 vwt(-0.6) vwt(5.9) 0;
             display: block;
+        }
+        @include mq(lg) {
+            padding: 0 0 px2Rem(6) 0;
+            // margin: 0 px2Rem(-0.6) px2Rem(5.9) 0;
         }
     }
     &__pc-ul {
@@ -291,11 +306,21 @@ li {
         font-weight: bold;
         @include mq() {
             font-size: vwt(16);
-            gap: vwt(33);
+            gap: vwt(37.8);
         }
         @include mq(lg) {
             font-size: px2Rem(16);
-            gap: px2Rem(33);
+            gap: px2Rem(37.8);
+        }
+    }
+    &__pc-list {
+        &--first {
+            // @include mq() {
+            //     margin-right: vwt(5.3);
+            // }
+            // @include mq(lg) {
+            //     margin-right: px2Rem(5.3);
+            // }
         }
     }
     &__pc-link {
@@ -314,10 +339,10 @@ li {
     padding: vw(23.5) 0 vw(24.3) 0;
     background-color: #168352;
     @include mq() {
-        padding: vwt(37.5) 0;
+        padding: vwt(35.8) 0 vwt(39) vwt(0.1);
     }
     @include mq(lg) {
-        padding: px2Rem(37.5) 0;
+        padding: px2Rem(35.8) 0 px2Rem(39) px2Rem(0.1);
     }
     &__container {
         max-width: vw(360);
@@ -351,24 +376,23 @@ li {
         line-height: 1.5;
         display: flex;
         @include mq() {
-            padding:0 vwt(22.8) 0 0;
+            padding:0 vwt(21.4) 0 0;
             line-height: 1.5;
         }
         @include mq(lg) {
-            padding:0 px2Rem(22.8) 0 0;
+            padding:0 px2Rem(21.4) 0 0;
             line-height: 1.5;
         }
         & + & {
-            border-left: 1px solid #fff;
-            padding: 0 0 0 vw(14.4);
+            border-left: vw(1) solid #fff;
+            padding: 0 0 0 vw(15);
             @include mq() {
-                padding: 0 0 0 vwt(18.5);
+                padding: 0 0 0 vwt(18.9);
                 border-left: vwt(1) solid #fff;
             }
             @include mq(lg) {
                 border-left: px2Rem(1) solid #fff;
-                padding: 0 0 0 px2Rem(18.5);
-
+                padding: 0 0 0 px2Rem(18.9);
             }
         }
     }
