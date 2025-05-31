@@ -1,9 +1,8 @@
 @use '../common/common' as *;
 
-
 .faq-cover {
     margin-top: vw(63);
-    padding: vw(20) 0 vw(53) 0;
+    padding: vw(20) 0 vw(35) 0;
     @include mq() {
         margin-top: vwt(114);
         padding: vwt(34) 0 vwt(56) 0;
@@ -37,19 +36,21 @@
             font-size: px2Rem(36);
         }
     }
+    &__breadcrumb {
+        margin-top: vw(17);
+        @include mq() {
+            margin-top: vwt(17);
+        }
+        @include mq(lg) {
+            margin-top: px2Rem(17);
+        }
+    }
     &__ol {
         display: flex;
         align-items: center;
         list-style: none;
         padding: 0;
-        margin-top: vw(15);
         justify-content: end;
-        @include mq() {
-            margin-top: vwt(15);
-        }
-        @include mq(lg) {
-            margin-top: px2Rem(15);
-        }
     }
 
     &__link {
@@ -74,27 +75,26 @@
             color: #168352;
         }
         &--arrow {
-            width: vw(5);
-            height: vw(10);
-            margin: 0 vw(7.3) 0 vw(6.5);
-            position: relative;
-            @include mq() {
-                width: vwt(5);
-                height: vwt(10);
-                margin: 0 vwt(7.3) 0 vwt(6.5);
-            }
-            @include mq(lg) {
-                width: px2Rem(5);
-                height: px2Rem(10);
-                margin: 0 px2Rem(7.3) 0 px2Rem(6.5);
-            }
             &::after {
                 content: "";
                 background-image: url("/assets/image/price/cover_arrow_sp.png");
                 background-size: contain;
                 background-repeat: no-repeat;
-                width: 100%;
-                height: 100%;
+                width: vw(5);
+                height: vw(10);
+                margin: 0 vw(7.3) 0 vw(6.5);
+                position: relative;
+                display: inline-block;
+                @include mq() {
+                    width: vwt(5);
+                    height: vwt(10);
+                    margin: 0 vwt(7.3) 0 vwt(6.5);
+                }
+                @include mq(lg) {
+                    width: px2Rem(5);
+                    height: px2Rem(10);
+                    margin: 0 px2Rem(7.3) 0 px2Rem(6.5);
+                }
             }
         }
     }
@@ -102,7 +102,7 @@
 
 /* Q&A */
 .faq {
-
+    padding-bottom: vw(162.2);
     &__container {
         max-width: vw(358);
         margin-inline: auto;
@@ -111,7 +111,7 @@
     &__accordion {
         border: vw(1) solid #ccc;
         border-radius: vw(16);
-        padding: vw(24);
+        padding: vw(22) vw(24) vw(15) vw(23);
         margin-bottom: vw(24);
     }
 
@@ -128,7 +128,7 @@
 
     &__accordion-trigger {
         display: flex;
-        justify-content: space-between;
+        align-items: flex-start;
     }
 
     &__text-q {
@@ -136,16 +136,36 @@
         font-weight: bold;
         color: #168352;
         font-family: "Montserrat", sans-serif;
+        line-height: 1;
     }
 
     &__item {
+        padding: 0 0 0 vw(16);
+    }
+
+    &__categories {
+        display: flex;
+        margin-right: vw(7.8);
     }
 
     &__category {
+        text-align: center;
         border-radius: vw(4);
-        border: 1px solid #168352;
+        border: vw(1) solid #168352;
         font-size: vw(11);
-        padding: vw(6) vw(12);
+        padding: vw(1.2) vw(10.4) vw(1.2);
+        display: block;
+        width: vw(100);
+        height: vw(24);
+        color: #168352;
+    }
+
+    .faq__category-first {
+        margin-right: vw(8);
+    }
+    &__accordion-icon {
+        margin-top: vw(11);
+        margin-left: auto;
     }
 
     &__text {
@@ -155,6 +175,7 @@
     &__question {
         font-size: vw(16);
         font-weight: bold;
+        padding: vw(1) vw(9) 0 vw(0.3) ;
     }
 
     &__accordion-icon {
@@ -163,6 +184,8 @@
 
     &__answer {
         font-size: vw(16);
+        padding: vw(1.6);
+        line-break: anywhere;
     }
 
 }

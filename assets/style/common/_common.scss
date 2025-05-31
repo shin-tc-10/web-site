@@ -301,7 +301,80 @@ li {
     &__pc-link {
         color: #000;
         &:hover {
-            color: #0056b3;
+            color: #168352;
+        }
+        &--highlight {
+            color: #168352;
+        }
+    }
+}
+
+/* フッター */
+.footer {
+    padding: vw(23.5) 0 vw(24.3) 0;
+    background-color: #168352;
+    @include mq() {
+        padding: vwt(37.5) 0;
+    }
+    @include mq(lg) {
+        padding: px2Rem(37.5) 0;
+    }
+    &__container {
+        max-width: vw(360);
+        margin-inline: auto;
+    }
+    &__ul {
+        display: flex;
+        justify-content: center;
+        font-size: vw(13);
+    }
+    &__link--first {
+        letter-spacing: vw(0.2);
+        @include mq() {
+            font-size: vwt(15);
+            letter-spacing: 0;
+        }
+        @include mq(lg) {
+            font-size: px2Rem(15);
+        }
+    }
+    &__link--second {
+        @include mq() {
+            font-size: vwt(15);
+        }
+        @include mq(lg) {
+            font-size: px2Rem(14);
+        }
+    }
+    &__list {
+        padding:0 vw(16.2) 0 vw(0.2);
+        line-height: 1.5;
+        display: flex;
+        @include mq() {
+            padding:0 vwt(22.8) 0 0;
+            line-height: 1.5;
+        }
+        @include mq(lg) {
+            padding:0 px2Rem(22.8) 0 0;
+            line-height: 1.5;
+        }
+        & + & {
+            border-left: 1px solid #fff;
+            padding: 0 0 0 vw(14.4);
+            @include mq() {
+                padding: 0 0 0 vwt(18.5);
+                border-left: vwt(1) solid #fff;
+            }
+            @include mq(lg) {
+                border-left: px2Rem(1) solid #fff;
+                padding: 0 0 0 px2Rem(18.5);
+
+            }
+        }
+    }
+    &__link {
+        &:hover {
+            opacity: 0.8;
         }
     }
 }

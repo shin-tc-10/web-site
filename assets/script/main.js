@@ -11,21 +11,23 @@ $(document).ready(function () {
     })
     // よくあるご質問
     $('.faq__accordion-trigger').each(function() {
-        $(this).on('click', function() {
+        // $(this).on('click', function() {
             const $button = $(this);
             const $content = $button.next();
             const isExpanded = $button.attr('aria-expanded') === 'true';
             $button.attr('aria-expanded', !isExpanded);
             $content.toggleClass('open');
-        });
+        // });
     });
+
+
     const swiper = new Swiper('.swiper', {
-        direction: 'horizontal',
         loop: true,
         pagination: {
             el: '.swiper-pagination',
-            
+            clickable: true,
         },
+        spaceBetween: 20,
     });
 
 });

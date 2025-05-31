@@ -1,11 +1,5 @@
 @use '../common/common' as *;
 
-.header {
-    &__pc-link--first {
-        color: #168352;
-    }
-}
-
 .price-cover {
     margin-top: vw(63);
     padding: vw(20) 0 vw(26) 0;
@@ -72,32 +66,27 @@
         @include mq(lg) {
             font-size: px2Rem(12);
         }
-        &--highlight {
-            font-weight: bold;
-            color: #168352;
-        }
         &--arrow {
-            width: vw(5);
-            height: vw(10);
-            margin: 0 vw(7.3) 0 vw(6.5);
-            position: relative;
-            @include mq() {
-                width: vwt(5);
-                height: vwt(10);
-                margin: 0 vwt(7.3) 0 vwt(6.5);
-            }
-            @include mq(lg) {
-                width: px2Rem(5);
-                height: px2Rem(10);
-                margin: 0 px2Rem(7.3) 0 px2Rem(6.5);
-            }
             &::after {
                 content: "";
                 background-image: url("/assets/image/price/cover_arrow_sp.png");
                 background-size: contain;
                 background-repeat: no-repeat;
-                width: 100%;
-                height: 100%;
+                width: vw(5);
+                height: vw(10);
+                margin: 0 vw(7.3) 0 vw(6.5);
+                position: relative;
+                display: inline-block;
+                @include mq() {
+                    width: vwt(5);
+                    height: vwt(10);
+                    margin: 0 vwt(7.3) 0 vwt(6.5);
+                }
+                @include mq(lg) {
+                    width: px2Rem(5);
+                    height: px2Rem(10);
+                    margin: 0 px2Rem(7.3) 0 px2Rem(6.5);
+                }
             }
         }
     }
@@ -113,7 +102,7 @@
             padding: 0 0 px2Rem(51.5) 0;
         }
     &__container {
-        // max-width: vw(358);
+        max-width: vw(358);
         margin-inline: auto;
         @include mq() {
             max-width: vwt(800);
@@ -123,13 +112,32 @@
         }
     }
     &__image {
-        width: vw(358);
-        height: vw(237);
+        width: 100%;
+        height: auto;
     }
 }
 
 .swiper-slide {
-text-align: center;
+    text-align: center;
+    width: vw(358);
+    height: vw(237);
+    @include mq() {
+        width: vwt(800);
+        height: vwt(500);
+    }
+    @include mq(lg) {
+        width: px2Rem(800);
+        height: px2Rem(500);
+    }
+}
+
+.swiper-pagination-bullet {
+    background-color: #eee;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #168352;
+
 }
 
 
@@ -410,7 +418,8 @@ text-align: center;
             font-size: px2Rem(20);
         }
         &:hover {
-            background-color: rgba(255, 255, 255, 0.1);
+            background-color: #fff;
+            color: #168352;
         }
     }
 }
