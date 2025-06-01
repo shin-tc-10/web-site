@@ -38,6 +38,7 @@
         font-size: vw(30);
         font-weight: bold;
         margin-top: vw(18.5);
+        padding-left: vw(1.8);
         @include mq() {
             font-size: vwt(36);
             margin-top: vwt(18.5);
@@ -341,10 +342,10 @@
 .price-spec {
     padding: 0 0 vw(64) 0;
         @include mq() {
-            padding: 0 0 vwt(64) 0;
+            padding: 0 0 vwt(70.8) 0;
         }
         @include mq(lg) {
-            padding: 0 0 px2Rem(64) 0;
+            padding: 0 0 px2Rem(70.8) 0;
         }
     &__container {
         max-width: vw(358);
@@ -384,7 +385,7 @@
         font-weight: bold;
         border-left: vw(2) solid #168352;
         padding-left: vw(15.5);
-        margin-bottom: vw(15.3);
+        margin-bottom: vw(17.1);
         line-height: 1.5;
         @include mq() {
             font-size: vwt(24);
@@ -404,7 +405,6 @@
     &__table {
         width: 100%;
         border-collapse: collapse;
-        border: vw(1) solid #ddd;
         table-layout: fixed;
         @include mq() {
             border: vwt(1) solid #ddd;
@@ -424,38 +424,51 @@
 
     &__th,
     &__td {
-        border: vw(1) solid #ddd;
-        padding: vw(5) 0 vw(5) vw(19.3);
+        padding: vw(5) 0 vw(5) vw(18.5);
         font-size: vw(16);
         text-align: left;
         @include mq() {
-            border: vwt(1) solid #ddd;
-            padding: vwt(16.4) 0 vwt(17.5) vwt(17.7);
+            padding: vwt(16.4) 0 vwt(16.4) vwt(17.7);
             font-size: vwt(16);
         }
         @include mq(lg) {
-            border: px2Rem(1) solid #ddd;
-            padding: px2Rem(16.4) 0 px2Rem(17.5) px2Rem(17.7);
+            padding: px2Rem(16.4) 0 px2Rem(16.4) px2Rem(17.7);
             font-size: px2Rem(16);
         }
     }
 
     &__th {
+        border: vw(1) solid #ddd;
+        border-bottom: none;
         @include mq() {
+            border: vwt(1) solid #ddd;
+
             width: vwt(266.5);
         }
         @include mq(lg) {
+            border: px2Rem(1) solid #ddd;
+
             width: px2Rem(266.5);
         }
     }
     &__td {
+        border: vw(1) solid #ddd;
+        &--last {
+            border-bottom: vw(1) solid #ddd;
+        }
+        border-bottom: none;
         @include mq() {
+            border: vwt(1) solid #ddd;
+
             width: 100%;
             padding-left: vwt(22.5);
         }
         @include mq(lg) {
+            border: px2Rem(1) solid #ddd;
+
             padding-left: px2Rem(22.5);
         }
+
     }
     
 
