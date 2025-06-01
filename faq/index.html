@@ -12,24 +12,22 @@
     <meta property="og:title" content="持続可能な未来農業を実現 | Kirameki Farm" >
     <meta property="og:description" content="Kirameki Farmは革新的な農業機器とビッグデータ、自動運転のロボット、リジェネラティブ農業を駆使して持続可能な農業を目指すイノベーション企業です。次世代の子どもたちに環境に優しい未来農業を残すために、効率化と環境配慮を融合した活動を推進しています。" >
     <meta property="og:type" content="article" >
-    <meta property="og:url" content="https://example.com/price/">
+    <meta property="og:url" content="https://example.com/faq/">
     <meta property="og:site_name" content="Kirameki Farm" >
 
     <!-- リセットCSS -->
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" >
-    <!-- CSS -->
-    <link rel="stylesheet" href="/assets/style/main.css" >
-
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/style/main.css" >
 
     <!-- JS関連 -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="/assets/script/main.js"></script>
 </head>
-
 
 <body>
     <main>
@@ -37,11 +35,11 @@
         <header class="header">
             <div class="header__container">
                 <div class="header__content">
-                    <h1 class="header__title">
+                    <div class="header__title">
                         <a class="header__link" href="/">
                             <img class="header__logo" src="/assets/image/common/header_logo.svg" alt="Kirameki Farm">
                         </a>
-                    </h1>
+                    </div>
                     <!-- PCメニュー -->
                     <nav class="header__pc-nav">
                         <ul class="header__pc-ul">
@@ -77,11 +75,12 @@
                 </nav>
             </div>
         </header>
+        <!-- メインビジュアル -->
         <section class="faq-cover">
             <div class="faq-cover__container">
                 <picture>
                     <source media="(min-width: 768px)" srcset="/assets/image/faq/cover_pc.jpg" >
-                    <img class="faq-cover__image" src="/assets/image/faq/cover_sp.jpg">
+                    <img class="faq-cover__image" src="/assets/image/faq/cover_sp.jpg" alt="">
                 </picture>
                 <h1 class="faq-cover__title">よくあるご質問</h1>
                 <nav class="faq-cover__breadcrumb">
@@ -96,29 +95,28 @@
                 </nav>
             </div>
         </section>
-
         <!-- FAQ -->
         <div class="faq">
             <div class="faq__container">
                 <div class="faq__accordion" role="button" tabindex="0" aria-expanded="false">
-                    <div class="faq__accordion-q">
+                    <div class="faq__accordion-q faq__accordion-q--first">
                         <span class="faq__text-q faq__text">Q.</span>
                         <div class="faq__item">
                             <span class="faq__category">ご利用について</span>
                             <span class="faq__question faq__text">農業用ドローンの主な用途は何ですか？</span>
                         </div>
-                        <img src="/assets/image/faq/faq_plus_sp.png" class="faq__accordion-icon faq__icon--plus" alt="">
+                        <img src="/assets/image/faq/faq_plus.png" class="faq__accordion-icon faq__icon--plus" alt="">
                     </div>
                     <div class="faq__accordion-content">
                         <div class="faq__accordion-body">
-                            <span class="faq__answer faq__text">
+                            <span class="faq__answer faq__text faq__answer--first">
                                 農業用ドローンは、作物の健康状態のモニタリング、除草剤・肥料等の散布、灌漑システムの管理など、農業生産の効率を向上させるために使用されます。
                             </span>
                         </div>
                     </div>
                 </div>
                 <div class="faq__accordion faq__accordion--second" role="button" tabindex="0" aria-expanded="false">
-                    <div class="faq__accordion-q">
+                    <div class="faq__accordion-q faq__accordion-q--second">
                         <span class="faq__text-q faq__text">Q.</span>
                         <div class="faq__item">
                             <div class="faq__categories">
@@ -127,11 +125,11 @@
                             </div>
                             <span class="faq__question faq__text">農業用ドローンの導入による主な利点は何ですか？</span>
                         </div>
-                        <img src="/assets/image/faq/faq_minus_sp.png" class="faq__accordion-icon" alt="">
+                        <img src="/assets/image/faq/faq_plus.png" class="faq__accordion-icon" alt="">
                     </div>
                     <div class="faq__accordion-content">
                         <div class="faq__accordion-body">
-                            <span class="faq__answer faq__text">
+                            <span class="faq__answer faq__text faq__answer--second">
                                 農業用ドローンの導入により、労働力を削減し作業効率を向上させることができます。また、病害虫の早期発見や適切な散布が可能となり、生産性や質を向上させることができます。
                             </span>
                         </div>
@@ -147,11 +145,11 @@
                             </div>
                             <span class="faq__question faq__text">農業用ドローンの種類は？</span>
                         </div>
-                        <img src="/assets/image/faq/faq_minus_sp.png" class="faq__accordion-icon" alt="">
+                        <img src="/assets/image/faq/faq_plus.png" class="faq__accordion-icon" alt="">
                     </div>
                     <div class="faq__accordion-content">
                         <div class="faq__accordion-body">
-                            <span class="faq__answer faq__text">
+                            <span class="faq__answer faq__text faq__answer--third">
                                 フィックスウィング（固定翼）ドローン、ロータリーウィング（回転翼）ドローン、および、マルチコプター（複数のプロペラを持つ）ドローンがあります。
                             </span>
                         </div>
@@ -167,7 +165,7 @@
                             </div>
                             <span class="faq__question faq__text">農業用ドローンの価格はどのくらいですか？</span>
                         </div>
-                        <img src="/assets/image/faq/faq_minus_sp.png" class="faq__accordion-icon" alt="">
+                        <img src="/assets/image/faq/faq_plus.png" class="faq__accordion-icon" alt="">
                     </div>
                     <div class="faq__accordion-content">
                         <div class="faq__accordion-body">
@@ -184,7 +182,7 @@
                             <span class="faq__category">製品について</span>
                             <span class="faq__question faq__text faq__question--fifth">特別な免許や資格は必要ですか？</span>
                         </div>
-                        <img src="/assets/image/faq/faq_minus_sp.png" class="faq__accordion-icon" alt="">
+                        <img src="/assets/image/faq/faq_plus.png" class="faq__accordion-icon" alt="">
                     </div>
                     <div class="faq__accordion-content">
                         <div class="faq__accordion-body">
@@ -201,7 +199,7 @@
                             <span class="faq__category">使用について</span>
                             <span class="faq__question faq__text">農業用ドローンの法規制は何ですか？</span>
                         </div>
-                        <img src="/assets/image/faq/faq_minus_sp.png" class="faq__accordion-icon" alt="">
+                        <img src="/assets/image/faq/faq_plus.png" class="faq__accordion-icon" alt="">
                     </div>
                     <div class="faq__accordion-content">
                         <div class="faq__accordion-body">
@@ -218,7 +216,7 @@
                             <span class="faq__category">製品について</span>
                             <span class="faq__question faq__text faq__question--seventh">農業用ドローンのバッテリー寿命は？</span>
                         </div>
-                        <img src="/assets/image/faq/faq_minus_sp.png" class="faq__accordion-icon" alt="">
+                        <img src="/assets/image/faq/faq_plus.png" class="faq__accordion-icon" alt="">
                     </div>
                     <div class="faq__accordion-content">
                         <div class="faq__accordion-body">
@@ -238,7 +236,7 @@
                             </div>
                             <span class="faq__question faq__text">散布する薬剤や肥料の量はどのように制御されますか？</span>
                         </div>
-                        <img src="/assets/image/faq/faq_minus_sp.png" class="faq__accordion-icon" alt="">
+                        <img src="/assets/image/faq/faq_plus.png" class="faq__accordion-icon" alt="">
                     </div>
                     <div class="faq__accordion-content">
                         <div class="faq__accordion-body">
@@ -255,7 +253,7 @@
                             <span class="faq__category faq__category--first">製品について</span>
                             <span class="faq__question faq__text">データ収集や解析にはどのようなソフトウェアが使用されますか？</span>
                         </div>
-                        <img src="/assets/image/faq/faq_minus_sp.png" class="faq__accordion-icon" alt="">
+                        <img src="/assets/image/faq/faq_plus.png" class="faq__accordion-icon" alt="">
                     </div>
                     <div class="faq__accordion-content">
                         <div class="faq__accordion-body">
@@ -275,7 +273,7 @@
                             </div>
                             <span class="faq__question faq__text">農業用ドローンはどのような気象条件で飛行できますか？</span>
                         </div>
-                        <img src="/assets/image/faq/faq_minus_sp.png" class="faq__accordion-icon" alt="">
+                        <img src="/assets/image/faq/faq_plus.png" class="faq__accordion-icon" alt="">
                     </div>
                     <div class="faq__accordion-content">
                         <div class="faq__accordion-body">
@@ -295,7 +293,7 @@
                             </div>
                             <span class="faq__question faq__text">農業用ドローンのメンテナンスには何が必要ですか？</span>
                         </div>
-                        <img src="/assets/image/faq/faq_minus_sp.png" class="faq__accordion-icon" alt="">
+                        <img src="/assets/image/faq/faq_plus.png" class="faq__accordion-icon" alt="">
                     </div>
                     <div class="faq__accordion-content">
                         <div class="faq__accordion-body">
@@ -307,14 +305,13 @@
                 </div>
             </div>
         </div>
-
-
+        <!-- フッター -->
         <footer class="footer">
             <div class="footer__container">
                 <nav class="footer__nav">
                     <ul class="footer__ul">
-                        <li class="footer__list"><a class="footer__link footer__link--first" href="/price/">価格・スペック</a></li>
-                        <li class="footer__list"><a class="footer__link footer__link--second" href="/faq/">よくあるご質問</a></li>
+                        <li class="footer__list"><a class="footer__link footer__link--first" href="/price">価格・スペック</a></li>
+                        <li class="footer__list"><a class="footer__link footer__link--second" href="/faq">よくあるご質問</a></li>
                     </ul>
                 </nav>
             </div>

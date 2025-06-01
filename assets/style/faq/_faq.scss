@@ -1,24 +1,27 @@
 @use '../common/common' as *;
 
+/* メインビジュアル */
 .faq-cover {
     margin-top: vw(63);
     padding: vw(20) 0 vw(35) 0;
     @include mq() {
         margin-top: vwt(114);
-        padding: vwt(40) 0 vwt(56) 0;
+        padding: vwt(40) 0 vwt(59.4) 0;
     }
     @include mq(lg) {
         margin-top: px2Rem(114);
-        padding: px2Rem(40) 0 px2Rem(56) 0;
+        padding: px2Rem(40) 0 px2Rem(59.4) 0;
     }
     &__container {
         max-width: vw(360);
         margin-inline: auto;
         @include mq() {
-            max-width: vwt(1200);
+            text-align: center;
+            position: relative;
+            max-width: vwt(1240);
         }
         @include mq(lg) {
-            max-width: px2Rem(1200);
+            max-width: px2Rem(1240);
         }
     }
     &__image {
@@ -28,6 +31,7 @@
         @include mq() {
             width: vwt(1200);
             height: vwt(550);
+            margin-bottom: 0;
         }
         @include mq(lg) {
             width: px2Rem(1200);
@@ -39,18 +43,32 @@
         font-weight: bold;
         @include mq() {
             font-size: vwt(36);
+            margin-top: vwt(18.5);
+            position: absolute;
+            bottom: vwt(35);
+            left: vwt(19.4);
+            border-radius: 0 vwt(40) 0 0;
+            background-color: #fff;
+            padding: vwt(25) vwt(34.4) vwt(30) vwt(40);
         }
         @include mq(lg) {
             font-size: px2Rem(36);
+            margin-top: px2Rem(18.5);
+            bottom: px2Rem(35);
+            left: px2Rem(19.4);
+            border-radius: 0 px2Rem(40) 0 0;
+            padding: px2Rem(25) px2Rem(34.4) px2Rem(30) px2Rem(40);
         }
     }
     &__breadcrumb {
         margin-top: vw(16.61);
         @include mq() {
-            margin-top: vwt(17);
+            margin-top: vwt(18.4);
+            padding-right: vwt(18.3);
         }
         @include mq(lg) {
-            margin-top: px2Rem(17);
+            margin-top: px2Rem(18.4);
+            padding-right: px2Rem(18.3);
         }
     }
     &__ol {
@@ -96,27 +114,35 @@
                 @include mq() {
                     width: vwt(5);
                     height: vwt(10);
-                    margin: 0 vwt(7.3) 0 vwt(6.5);
+                    margin: 0 vwt(8) 0 vwt(6.5);
                 }
                 @include mq(lg) {
                     width: px2Rem(5);
                     height: px2Rem(10);
-                    margin: 0 px2Rem(7.3) 0 px2Rem(6.5);
+                    margin: 0 px2Rem(8) 0 px2Rem(6.5);
                 }
             }
         }
     }
 }
 
-/* Q&A */
+/* FAQ */
 .faq {
-    padding-bottom: vw(147);
+    padding-bottom: vw(145);
+    @include mq() {
+        padding-bottom: vwt(48.4);
+    }
+    @include mq(lg) {
+        padding-bottom: px2Rem(48.4);
+    }
     &__container {
         max-width: vw(358);
         margin-inline: auto;
         @include mq() {
+            max-width: vwt(800);
         }
         @include mq(lg) {
+            max-width: px2Rem(800);
         }
     }
 
@@ -124,52 +150,17 @@
         border: vw(1) solid #ccc;
         border-radius: vw(16);
         margin-bottom: vw(24);
-
-        &--second {
-            padding-top: vw(22.78);
+        @include mq() {
+            border: vwt(1) solid #ccc;
+            border-radius: vwt(16);
+            margin-bottom: vwt(24);
         }
-        &--third {
-            padding-top: vw(22.78);
+        @include mq(lg) {
+            border: px2Rem(1) solid #ccc;
+            border-radius: px2Rem(16);
+            margin-bottom: px2Rem(24);
         }
-        &--fourth {
-            padding-top: vw(23);
-        }
-        &--fifth {
-            padding-top: vw(23);
-            padding-bottom: vw(16.2);
-        }
-        &--sixth {
-            padding-top: vw(23);
-            padding-bottom: vw(16.3);
-        }
-        &--seventh {
-            padding-top: vw(23);
-            padding-bottom: vw(18.26);
-            padding-right: vw(19);
-        }
-        &--eighth {
-            padding-top: vw(23);
-            padding-bottom: vw(17.6);
-        }
-        &--ninth {
-            padding-top: vw(23);
-            padding-bottom: vw(16.3);
-        }
-        &--tenth {
-            padding-top: vw(23);
-        }
-        &--eleventh {
-            padding-top: vw(23);
-        }
-        &--tenth {
-            padding-bottom: vw(16.4);
-        }
-        &--eleventh {
-            padding-bottom: vw(16.8);
-        }
-
     }
-
 
     &__accordion-content {
         max-height: 0;
@@ -178,31 +169,72 @@
     }
 
     &__accordion-content.open {
-        max-height: 500px;
+        max-height: vw(500);
+        @include mq() {
+            max-height: vwt(500);
+        }
+        @include mq(lg) {
+            max-height: px2Rem(500);
+        }
     }
 
     &__accordion-q {
         display: flex;
         align-items: flex-start;
-        padding: vw(22.39) vw(24) vw(15) vw(23);
-        
+        padding: vw(23) vw(24) 0 vw(23);
+        &--second {
+            padding-top: vw(23);
+        }
+        &--third {
+            padding-top: vw(23);
+        }
+        @include mq() {
+            padding: vwt(22.79) vwt(31) vwt(15) vwt(31);
+        }
+        @include mq(lg) {
+            padding: px2Rem(22.79) px2Rem(31) px2Rem(15) px2Rem(31);
+        }
     }
 
+    &__text {
+        display: block;
+    }
     &__text-q {
         font-size: vw(24);
         font-weight: bold;
         color: #168352;
         font-family: "Montserrat", sans-serif;
         line-height: 1;
+        @include mq() {
+            font-size: vwt(24);
+            position: relative;
+            top: vwt(-2.1);
+        }
+        @include mq(lg) {
+            font-size: px2Rem(24);
+            top: px2Rem(-2.1);
+        }
     }
 
     &__item {
         padding: 0 0 0 vw(16);
+        @include mq() {
+            padding: 0 0 0 vwt(14.8);
+        }
+        @include mq(lg) {
+            padding: 0 0 0 px2Rem(14.8);
+        }
     }
 
     &__categories {
         display: flex;
         margin-right: vw(7.8);
+        @include mq() {
+            margin-right: vwt(7.8);
+        }
+        @include mq(lg) {
+            margin-right: px2Rem(7.8);
+        }
     }
 
     &__category {
@@ -215,81 +247,140 @@
         width: vw(100);
         height: vw(24);
         color: #168352;
+        white-space: nowrap;
+        @include mq() {
+            border-radius: vwt(4);
+            border: vwt(1) solid #168352;
+            font-size: vwt(11);
+            padding: vwt(1.2) vwt(10.4) vwt(1.2);
+            width: vwt(100);
+            height: vwt(24);
+        }
+        @include mq(lg) {
+            border-radius: px2Rem(4);
+            border: px2Rem(1) solid #168352;
+            font-size: px2Rem(11);
+            padding: px2Rem(1.2) px2Rem(10.4) px2Rem(1.2);
+            width: px2Rem(100);
+            height: px2Rem(24);
+        }
         &--first {
             margin-right: vw(8);
+            @include mq() {
+                margin-right: vwt(8);
+            }
+            @include mq(lg) {
+                margin-right: px2Rem(8);
+            }
         }
-    }
-
-    
-    &__text {
-        display: block;
     }
     
     &__question {
         font-size: vw(16);
         font-weight: bold;
-        padding: vw(1) vw(9) 0 vw(0.3);
+        padding: vw(0.8) vw(9) 0 vw(0.3);
+        @include mq() {
+            font-size: vwt(18);
+            padding: vwt(8.6) vwt(9) 0 vwt(0.5);
+        }
+        @include mq(lg) {
+            font-size: px2Rem(18);
+            padding: px2Rem(8.6) px2Rem(9) 0 px2Rem(0.5);
+        }
         &--fifth {
             line-break: anywhere;
         }
         &--seventh {
             line-break: anywhere;
-            padding-right: vw(14.85);
+            padding-right: px2Rem(14.85);
+            @include mq() {
+                padding-right: vwt(14.85);
+            }
+            @include mq(lg) {
+                padding-right: px2Rem(14.85);
+            }
         }
         &--eighth {
             line-break: anywhere;
             padding-right: vw(14.85);
+            @include mq() {
+                padding-right: vwt(14.85);
+            }
+            @include mq(lg) {
+                padding-right: px2Rem(14.85);
+            }
         }
     }
     
     &__accordion-content {
-        padding: 0 vw(24) vw(15) vw(23);
-        
+        padding: 0 vw(19) vw(15.1) vw(23);
+        @include mq() {
+            padding: 0 vwt(24) vwt(16) vwt(30);
+        }
+        @include mq(lg) {
+            padding: 0 px2Rem(24) px2Rem(16) px2Rem(30);
+        }
     }
-    
+
     &__accordion-icon {
         margin-left: auto;
     }
     &__icon--plus {
         height: vw(19);
         width: vw(19);
+        @include mq() {
+            height: vwt(19);
+            width: vwt(19);
+        }
+        @include mq(lg) {
+            height: px2Rem(19);
+            width: px2Rem(19);
+        }
     }
     &__icon--minus {
-        margin-top: vw(11);
+        margin-top: vw(11.4);
         height: vw(3);
         width: vw(20);
+        @include mq() {
+            margin-top: vwt(11);
+            height: vwt(3);
+            width: vwt(20);
+        }
+        @include mq(lg) {
+            margin-top: px2Rem(11);
+            height: px2Rem(3);
+            width: px2Rem(20);
+        }
     }
     
     &__answer {
         font-size: vw(16);
-        padding: vw(1.6);
+        padding: vw(1.6) vw(1.6) vw(1.6) vw(3.8);
         line-break: anywhere;
-        &--fourth {
-            padding-left: vw(3.3)
+        &--first, &--second, &--third {
+            padding: vw(1.6);
         }
         &--fifth {
-            padding: 0 0 0 vw(3.2);
-        }
-        &--sixth {
-            padding: vw(1.4) 0 0 vw(3.7);
-        }
-        &--sixth {
-            padding: vw(1.8) 0 0 vw(3.4);
-        }
-        &--seventh {
-            padding: vw(0.4) 0 0 vw(3);
-        }
-        &--eighth {
-            padding: vw(1.5) 0 0 vw(3.6);
-        }
-        &--ninth {
-            padding: vw(0.5) 0 0 vw(3.4);
-        }
-        &--tenth {
-            padding: vw(1.6) 0 0 vw(4);
+            padding: 0 vw(1.6) vw(1.6) vw(3.8);
         }
         &--eleventh {
-            padding: vw(9.3) 0 0 vw(4.1);
+            padding: vw(9.8) vw(1.6) vw(1.6) vw(3.8);
+        }
+        @include mq() {
+            font-size: vwt(16);
+            padding: vwt(1.6);
+        }
+        @include mq(lg) {
+            font-size: px2Rem(16);
+            padding: px2Rem(1.6);
+        }
+        &--seventh {
+            @include mq() {
+                padding-right: vwt(7.3);
+            }
+            @include mq(lg) {
+                padding-right: px2Rem(7.3);
+            }
         }
     }
 

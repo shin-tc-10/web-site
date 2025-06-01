@@ -17,15 +17,14 @@
 
     <!-- リセットCSS -->
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" >
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-    <!-- CSS -->
-    <link rel="stylesheet" href="/assets/style/main.css" >
-
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/style/main.css" >
 
     <!-- JS関連 -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
@@ -33,18 +32,17 @@
     <script src="/assets/script/main.js"></script>
 </head>
 
-
 <body>
     <main>
         <!-- ヘッダー -->
         <header class="header">
             <div class="header__container">
                 <div class="header__content">
-                    <h1 class="header__title">
+                    <div class="header__title">
                         <a class="header__link" href="/">
                             <img class="header__logo" src="/assets/image/common/header_logo.svg" alt="Kirameki Farm">
                         </a>
-                    </h1>
+                    </div>
                     <!-- PCメニュー -->
                     <nav class="header__pc-nav">
                         <ul class="header__pc-ul">
@@ -80,11 +78,12 @@
                 </nav>
             </div>
         </header>
+        <!-- メインビジュアル -->
         <section class="price-cover">
             <div class="price-cover__container">
                 <picture>
                     <source media="(min-width: 768px)" srcset="/assets/image/price/cover_pc.jpg" >
-                    <img class="price-cover__image" src="/assets/image/price/cover_sp.jpg">
+                    <img class="price-cover__image" src="/assets/image/price/cover_sp.jpg" alt="">
                 </picture>
                 <h1 class="price-cover__title">
                     価格・<span class="price-cover__text">スペック</span>
@@ -101,6 +100,7 @@
                 </nav>
             </div>
         </section>
+        <!-- ギャラリー -->
         <section class="price-gallery">
             <div class="price-gallery__container">
                 <h2 class="price-gallery__heading price-heading">ギャラリー</h2>
@@ -129,40 +129,43 @@
                 </div>
             </div>
         </section>
+        <!-- 特長 -->
         <section class="price-features">
             <div class="price-features__container">
                 <h2 class="price-features__heading price-heading">特長</h2>
-                <div class="price-features__items">
-                    <div class="price-features__item">
+                <ul class="price-features__items">
+                    <li class="price-features__item">
                         <picture>
                             <source media="(min-width: 768px)" srcset="/assets/image/price/features_01_pc.jpg" >
-                            <img class="price-features__image" src="/assets/image/price/features_01_sp.jpg">
+                            <img class="price-features__image" src="/assets/image/price/features_01_sp.jpg" alt="">
                         </picture>
                         <p class="price-features__description">自動操縦が可能で、短時間で大量の農作物を監視、収穫、播種、散布などの作業ができます。</p>
-                    </div>
-                    <div class="price-features__item">
+                    </li>
+                    <li class="price-features__item">
                         <picture>
                             <source media="(min-width: 768px)" srcset="/assets/image/price/features_02_pc.jpg" >
-                            <img class="price-features__image" src="/assets/image/price/features_02_sp.jpg">
+                            <img class="price-features__image" src="/assets/image/price/features_02_sp.jpg" alt="">
                         </picture>
                         <p class="price-features__description price-features__description--second">高精度のカメラやセンサーを搭載しており、正確な土壌・作物の情報を収集でき、水や肥料などの資源を適切に配分できます。</p>
-                    </div>
-                    <div class="price-features__item">
+                    </li>
+                    <li class="price-features__item">
                         <picture>
                             <source media="(min-width: 768px)" srcset="/assets/image/price/features_03_pc.jpg" >
-                            <img class="price-features__image" src="/assets/image/price/features_03_sp.jpg">
+                            <img class="price-features__image" src="/assets/image/price/features_03_sp.jpg" alt="">
                         </picture>
                         <p class="price-features__description">必要な場所にだけ肥料や農薬を散布することができます。これにより、農薬や肥料の過剰使用が抑えられ、環境負荷やコスト削減に繋がります。</p>
-                    </div>
-                </div>
+                    </li>
+                </ul>
             </div>
         </section>
+        <!-- メーカー希望小売価格 -->
         <section class="price-manufacturer">
             <div class="price-manufacturer__container">
                 <h2 class="price-manufacturer__heading price-heading">メーカー希望小売価格</h2>
                 <p class="price-manufacturer__price">¥550,000<span class="price-manufacturer__tax">（税込）</span></p>
             </div>
         </section>
+        <!-- スペック -->
         <section class="price-spec">
             <div class="price-spec__container">
                 <h2 class="price-spec__heading price-heading">スペック</h2>
@@ -173,7 +176,6 @@
                             <th class="price-spec__th">ドローン名</th>
                             <td class="price-spec__td">アグリ・ファルコン</td>
                         </tr>
-                        <tr class="price-spec__tr"></tr>
                         <tr class="price-spec__tr">
                             <th class="price-spec__th">製品番号</th>
                             <td class="price-spec__td">AGF-100</td>
@@ -206,11 +208,13 @@
                 </div>
             </div>
         </section>
+        <!-- お問い合わせ -->
         <div class="price-contact">
             <div class="price-contact__container">
-                <a class="price-contact__btn">お問い合わせ</a>
+                <a class="price-contact__btn" href="/contact">お問い合わせ</a>
             </div>
         </div>
+        <!-- フッター -->
         <footer class="footer">
             <div class="footer__container">
                 <nav class="footer__nav">

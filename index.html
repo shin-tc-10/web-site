@@ -17,13 +17,12 @@
 
     <!-- リセットCSS -->
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" >
-    <!-- CSS -->
-    <link rel="stylesheet" href="/assets/style/main.css" >
-
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/style/main.css" >
 
     <!-- JS関連 -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
@@ -76,6 +75,7 @@
                 </nav>
             </div>
         </header>
+        <!-- メインビジュアル -->
         <section class="cover">
             <div class="cover__container">
                 <div class="cover__text">
@@ -86,12 +86,13 @@
                 </div>
                 <div class="cover__content">
                     <picture>
-                        <source media="(min-width: 768px)" srcset="/assets/image/top/cover_img_pc.jpg" >
-                        <img class="cover__image" src="/assets/image/top/cover_img_sp.jpg">
+                        <source media="(min-width: 768px)" srcset="/assets/image/top/cover_pc.jpg" >
+                        <img class="cover__image" src="/assets/image/top/cover_sp.jpg" alt="">
                     </picture>
                 </div>
             </div>
         </section>
+        <!-- 私たちについて -->
         <section class="about">
             <div class="about__container">
                 <h3 class="about__heading heading">
@@ -107,6 +108,7 @@
                 </div>
             </div>
         </section>
+        <!-- 私たちが選ばれる3つの理由 -->
         <section class="features">
             <div class="features__container">
                 <h3 class="features__heading heading">
@@ -117,27 +119,28 @@
                     <li class="features__item">
                         <picture>
                             <source media="(min-width: 768px)" srcset="/assets/image/top/features_01_pc.jpg">
-                            <img class="features__image" src="/assets/image/top/features_01_sp.jpg">
+                            <img class="features__image" src="/assets/image/top/features_01_sp.jpg" alt="">
                         </picture>
                         <div class="features__description">農業の未来と革新的デザイン性で最新鋭の機能を完備</div>
                     </li>
                     <li class="features__item">
                         <picture>
                             <source media="(min-width: 768px)" srcset="/assets/image/top/features_02_pc.jpg">
-                            <img class="features__image" src="/assets/image/top/features_02_sp.jpg">
+                            <img class="features__image" src="/assets/image/top/features_02_sp.jpg" alt="">
                         </picture>
                         <div class="features__description">ビッグデータを駆使して、省電力・効率化を実現</div>
                     </li>
                     <li class="features__item">
                         <picture>
                             <source media="(min-width: 768px)" srcset="/assets/image/top/features_03_pc.jpg">
-                            <img class="features__image" src="/assets/image/top/features_03_sp.jpg">
+                            <img class="features__image" src="/assets/image/top/features_03_sp.jpg" alt="">
                         </picture>
                         <div class="features__description features__description--third">自動運転技術を搭載したロボットで一年中稼働することができる</div>
                     </li>
                 </ul>
             </div>
         </section>
+        <!-- 製品・サービス紹介 -->
         <section class="products-service">
             <div class="products-service__container">
                 <h3 class="products-service__heading heading">
@@ -149,7 +152,7 @@
                         <a href="#" class="products-service__link">
                             <picture>
                                 <source media="(min-width: 768px)" srcset="/assets/image/top/products_service_01_pc.png">
-                                <img class="products-service__image products-service__image--first" src="/assets/image/top/products_service_01_sp.png">
+                                <img class="products-service__image products-service__image--first" src="/assets/image/top/products_service_01_sp.png" alt="">
                             </picture>
                             <div class="products-service__description">
                                 <span class="line-break">エネルギーセイバー</span><span class="line-break">農業ドローン</span>
@@ -160,7 +163,7 @@
                         <a href="#" class="products-service__link">
                             <picture>
                                 <source media="(min-width: 768px)" srcset="/assets/image/top/products_service_02_pc.png">
-                                <img class="products-service__image products-service__image--second" src="/assets/image/top/products_service_02_sp.png">
+                                <img class="products-service__image products-service__image--second" src="/assets/image/top/products_service_02_sp.png" alt="">
                             </picture>
                             <div class="products-service__description products-service__description--second">
                                 <span class="line-break">プログレッシブ</span><span class="line-break">ハーベストボット</span>
@@ -171,7 +174,7 @@
                         <a href="#" class="products-service__link">
                             <picture>
                                 <source media="(min-width: 768px)" srcset="/assets/image/top/products_service_03_pc.png">
-                                <img class="products-service__image products-service__image--small" src="/assets/image/top/products_service_03_sp.png">
+                                <img class="products-service__image products-service__image--small" src="/assets/image/top/products_service_03_sp.png" alt="">
                             </picture>
                             <div class="products-service__description products-service__description--small products-service__description--third">
                                 <span class="line-break line-break--disable">フューチャーファーム</span><span class="line-break line-break--disable">マスター</span>
@@ -182,7 +185,7 @@
                         <a href="#" class="products-service__link">
                             <picture>
                                 <source media="(min-width: 768px)" srcset="/assets/image/top/products_service_04_pc.png">
-                                <img class="products-service__image products-service__image--small" src="/assets/image/top/products_service_04_sp.png">
+                                <img class="products-service__image products-service__image--small" src="/assets/image/top/products_service_04_sp.png" alt="">
                             </picture>
                             <div class="products-service__description products-service__description--small products-service__description--fourth">
                                 ミラクルグローアシスト
@@ -193,7 +196,7 @@
                         <a href="#" class="products-service__link">
                             <picture>
                                 <source media="(min-width: 768px)" srcset="/assets/image/top/products_service_05_pc.png">
-                                <img class="products-service__image products-service__image--small" src="/assets/image/top/products_service_05_sp.png">
+                                <img class="products-service__image products-service__image--small" src="/assets/image/top/products_service_05_sp.png" alt="">
                             </picture>
                             <div class="products-service__description products-service__description--small">
                                 インテリジェントプランター
@@ -203,6 +206,7 @@
                 </ul>
             </div>
         </section>
+        <!-- お客様の事例紹介 -->
         <section class="case">
             <div class="case__container">
                 <h3 class="case__heading heading">
@@ -214,7 +218,7 @@
                         <a class="case__link" href="#">
                             <picture>
                                 <source media="(min-width: 768px)" srcset="/assets/image/top/case_01_pc.jpg">
-                                <img class="case__image" src="/assets/image/top/case_01_sp.jpg">
+                                <img class="case__image" src="/assets/image/top/case_01_sp.jpg" alt="">
                             </picture>
                             <p class="case__description">利用開始後約1年で売り上げが150％増加</p>
                         </a>
@@ -223,7 +227,7 @@
                         <a class="case__link" href="#">
                             <picture>
                                 <source media="(min-width: 768px)" srcset="/assets/image/top/case_02_pc.jpg">
-                                <img class="case__image" src="/assets/image/top/case_02_sp.jpg">
+                                <img class="case__image" src="/assets/image/top/case_02_sp.jpg" alt="">
                             </picture>
                             <p class="case__description">無駄な作業が減り、30％のコストカットに成功</p>
                         </a>
@@ -232,7 +236,7 @@
                         <a class="case__link" href="#">
                             <picture>
                                 <source media="(min-width: 768px)" srcset="/assets/image/top/case_03_pc.jpg">
-                                <img class="case__image" src="/assets/image/top/case_03_sp.jpg">
+                                <img class="case__image" src="/assets/image/top/case_03_sp.jpg" alt="">
                             </picture>
                             <p class="case__description">24時間対応のサポートデスクがあるのも安心です</p>
                         </a>
@@ -240,6 +244,7 @@
                 </ul>
             </div>
         </section>
+        <!-- お知らせ -->
         <section class="news">
             <div class="news__container">
                 <h3 class="news__heading heading">
@@ -293,6 +298,7 @@
                 <a class="news__list-link" href="/news">ニュース一覧へ</a>
             </div>
         </section>
+        <!-- フッター -->
         <footer class="footer">
             <div class="footer__container">
                 <nav class="footer__nav">
@@ -304,6 +310,5 @@
             </div>
         </footer>
     </main>
-
 </body>
 </html>

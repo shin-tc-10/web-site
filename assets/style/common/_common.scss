@@ -78,12 +78,17 @@ $breakpoints: (
     @return calc($px * 100vw / $pc-full-width);
 }
 
+// 変数
+@mixin dflex-space-between-align-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 /* 共通 */
 body {
     margin: 0 auto;
-    // font-family: 'Noto Serif JP', serif;
     font-family: "Noto Sans JP", sans-serif;
-
     line-height: 1.75;
     color: #333;
 }
@@ -185,13 +190,6 @@ li {
     }
 }
 
-// 変数
-@mixin dflex-space-between-align-center {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 /* ヘッダー */
 .header {
     width: 100%;
@@ -291,17 +289,15 @@ li {
         display: none;
         @include mq() {
             padding: 0 0 vwt(6) 0;
-            // margin: 0 vwt(-0.6) vwt(5.9) 0;
             display: block;
         }
         @include mq(lg) {
             padding: 0 0 px2Rem(6) 0;
-            // margin: 0 px2Rem(-0.6) px2Rem(5.9) 0;
         }
     }
     &__pc-ul {
         display: flex;
-        gap: vw(t33);
+        gap: vw(33);
         font-size: vw(18);
         font-weight: bold;
         @include mq() {
@@ -311,16 +307,6 @@ li {
         @include mq(lg) {
             font-size: px2Rem(16);
             gap: px2Rem(37.8);
-        }
-    }
-    &__pc-list {
-        &--first {
-            // @include mq() {
-            //     margin-right: vwt(5.3);
-            // }
-            // @include mq(lg) {
-            //     margin-right: px2Rem(5.3);
-            // }
         }
     }
     &__pc-link {

@@ -1,5 +1,6 @@
 @use '../common/common' as *;
 
+/* メインビジュアル */
 .price-cover {
     margin-top: vw(63);
     padding: vw(20) 0 vw(26) 0;
@@ -37,7 +38,6 @@
         font-size: vw(30);
         font-weight: bold;
         margin-top: vw(18.5);
-        padding: 0 0 0 vw(2);
         @include mq() {
             font-size: vwt(36);
             margin-top: vwt(18.5);
@@ -160,6 +160,7 @@
     }
 }
 
+/* スワイパー(ギャラリーで使用) */
 .swiper-slide {
     text-align: center;
     width: vw(358);
@@ -173,17 +174,17 @@
         height: px2Rem(500);
     }
 }
-
 .swiper-pagination-bullet {
     background-color: #eee;
+    opacity: 1;
 }
-
 .swiper-pagination-bullet-active {
     background-color: #168352;
 }
-
 .swiper-pagination-horizontal.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
-        @include mq() {
+    bottom: vw(4);
+    left: vw(0);
+    @include mq() {
         bottom: vwt(14.1);
         left: vwt(1.6);
     }
@@ -191,38 +192,11 @@
         bottom: px2Rem(14.1);
         left: px2Rem(1.6);
     }
-
 }
 
-
-.maker-price {
-    &__container {
-        max-width: vw(358);
-        margin-inline: auto;
-        @include mq() {
-            max-width: vwt(1200);
-        }
-        @include mq(lg) {
-            max-width: px2Rem(1200);
-        }
-    }
-}
-
-.price-spec {
-    &__container {
-        max-width: vw(358);
-        margin-inline: auto;
-        @include mq() {
-            max-width: vwt(800);
-        }
-        @include mq(lg) {
-            max-width: px2Rem(800);
-        }
-    }
-}
-
+/* 特徴 */
 .price-features {
-    padding: 0 0 vw(26) 0;
+    padding: 0 0 vw(16.2) 0;
         @include mq() {
             padding: 0 0 vwt(20.6) 0;
         }
@@ -243,6 +217,7 @@
         @include mq() {
             display: flex;
             justify-content: space-between;
+            text-align: center;
         }
     }
     &__image {
@@ -272,11 +247,11 @@
         width: vw(358);
         @include mq() {
             margin-bottom: vwt(31.5);
-            width: vwt(358);
+            width: vwt(247);
         }
         @include mq(lg) {
             margin-bottom: px2Rem(31.5);
-            width: px2Rem(358);
+            width: px2Rem(247);
         }
     }
     &__description {
@@ -289,6 +264,7 @@
             font-size: vwt(18);
             max-width: vwt(350);
             margin-top: vwt(6.9);
+            text-align: left;
         }
         @include mq(lg) {
             font-size: px2Rem(18);
@@ -361,6 +337,7 @@
     }
 }
 
+/* スペック */
 .price-spec {
     padding: 0 0 vw(64) 0;
         @include mq() {
@@ -407,7 +384,7 @@
         font-weight: bold;
         border-left: vw(2) solid #168352;
         padding-left: vw(15.5);
-        margin-bottom: vw(17.5);
+        margin-bottom: vw(15.3);
         line-height: 1.5;
         @include mq() {
             font-size: vwt(24);
