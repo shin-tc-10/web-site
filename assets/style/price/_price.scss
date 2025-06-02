@@ -25,6 +25,8 @@
         }
     }
     &__image {
+        width: vw(358);
+        height: vw(230);
         @include mq() {
             width: vwt(1200);
             height: vwt(551);
