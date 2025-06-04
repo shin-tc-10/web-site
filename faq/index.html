@@ -21,11 +21,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <!-- CSS -->
     <link rel="stylesheet" href="/assets/style/main.css" >
 
     <!-- JS関連 -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="/assets/script/main.js"></script>
 </head>
 
@@ -83,29 +86,32 @@
                     <img class="faq-cover__image" src="/assets/image/faq/cover_sp.jpg" alt="">
                 </picture>
                 <h1 class="faq-cover__title">よくあるご質問</h1>
-                <nav class="faq-cover__breadcrumb">
-                    <ol class="faq-cover__ol">
-                        <li class="faq-cover__list">
-                            <a class="faq-cover__link faq-cover__list--arrow" href="/">トップ</a>
-                        </li>
-                        <li class="faq-cover__list">
-                            <span>よくあるご質問</span>
-                        </li>
-                    </ol>
-                </nav>
             </div>
         </section>
+        <div class="faq-cover__breadcrumb">
+            <nav class="faq-cover__nav">
+                <ol class="faq-cover__ol">
+                    <li class="faq-cover__list">
+                        <a class="faq-cover__link faq-cover__list--arrow" href="/">トップ</a>
+                    </li>
+                    <li class="faq-cover__list">
+                        <span>よくあるご質問</span>
+                    </li>
+                </ol>
+            </nav>
+        </div>
         <!-- FAQ -->
         <div class="faq">
             <div class="faq__container">
                 <div class="faq__accordion" role="button" tabindex="0" aria-expanded="false">
                     <div class="faq__accordion-q faq__accordion-q--first">
                         <span class="faq__text-q faq__text">Q.</span>
-                        <div class="faq__item">
-                            <span class="faq__category">ご利用について</span>
-                            <span class="faq__question faq__text">農業用ドローンの主な用途は何ですか？</span>
+                        <div class="faq__accordion-item">
+                            <div class="faq__content">
+                                <span class="faq__category">ご利用について</span>
+                                <span class="faq__question faq__text">農業用ドローンの主な用途は何ですか？</span>
+                            </div>
                         </div>
-                        <img src="/assets/image/faq/faq_plus.png" class="faq__accordion-icon faq__icon--plus" alt="">
                     </div>
                     <div class="faq__accordion-content">
                         <div class="faq__accordion-body">
@@ -118,14 +124,15 @@
                 <div class="faq__accordion faq__accordion--second" role="button" tabindex="0" aria-expanded="false">
                     <div class="faq__accordion-q faq__accordion-q--second">
                         <span class="faq__text-q faq__text">Q.</span>
-                        <div class="faq__item">
-                            <div class="faq__categories">
-                                <span class="faq__category faq__category--first">ご利用について</span>
-                                <span class="faq__category">製品について</span>
+                        <div class="faq__accordion-item">
+                            <div class="faq__content">
+                                <div class="faq__categories">
+                                    <span class="faq__category faq__category--first">ご利用について</span>
+                                    <span class="faq__category">製品について</span>
+                                </div>
+                                <span class="faq__question faq__text">農業用ドローンの導入による主な利点は何ですか？</span>
                             </div>
-                            <span class="faq__question faq__text">農業用ドローンの導入による主な利点は何ですか？</span>
                         </div>
-                        <img src="/assets/image/faq/faq_plus.png" class="faq__accordion-icon" alt="">
                     </div>
                     <div class="faq__accordion-content">
                         <div class="faq__accordion-body">
@@ -138,14 +145,15 @@
                 <div class="faq__accordion faq__accordion--third" role="button" tabindex="0" aria-expanded="false">
                     <div class="faq__accordion-q">
                         <span class="faq__text-q faq__text">Q.</span>
-                        <div class="faq__item">
-                            <div class="faq__categories">
-                                <span class="faq__category faq__category--first">ご利用について</span>
-                                <span class="faq__category">製品について</span>
+                        <div class="faq__accordion-item">
+                            <div class="faq__content">
+                                <div class="faq__categories">
+                                    <span class="faq__category faq__category--first">ご利用について</span>
+                                    <span class="faq__category">製品について</span>
+                                </div>
+                                <span class="faq__question faq__text">農業用ドローンの種類は？</span>
                             </div>
-                            <span class="faq__question faq__text">農業用ドローンの種類は？</span>
                         </div>
-                        <img src="/assets/image/faq/faq_plus.png" class="faq__accordion-icon" alt="">
                     </div>
                     <div class="faq__accordion-content">
                         <div class="faq__accordion-body">
@@ -158,14 +166,15 @@
                 <div class="faq__accordion faq__accordion--fourth" role="button" tabindex="0" aria-expanded="false">
                     <div class="faq__accordion-q">
                         <span class="faq__text-q faq__text">Q.</span>
-                        <div class="faq__item">
-                            <div class="faq__categories">
-                                <span class="faq__category faq__category--first">ご利用について</span>
-                                <span class="faq__category">使用について</span>
+                        <div class="faq__accordion-item">
+                            <div class="faq__content">
+                                <div class="faq__categories">
+                                    <span class="faq__category faq__category--first">ご利用について</span>
+                                    <span class="faq__category">使用について</span>
+                                </div>
+                                <span class="faq__question faq__text">農業用ドローンの価格はどのくらいですか？</span>
                             </div>
-                            <span class="faq__question faq__text">農業用ドローンの価格はどのくらいですか？</span>
                         </div>
-                        <img src="/assets/image/faq/faq_plus.png" class="faq__accordion-icon" alt="">
                     </div>
                     <div class="faq__accordion-content">
                         <div class="faq__accordion-body">
@@ -178,11 +187,12 @@
                 <div class="faq__accordion faq__accordion--fifth" role="button" tabindex="0" aria-expanded="false">
                     <div class="faq__accordion-q">
                         <span class="faq__text-q faq__text">Q.</span>
-                        <div class="faq__item">
-                            <span class="faq__category">製品について</span>
-                            <span class="faq__question faq__text faq__question--fifth">特別な免許や資格は必要ですか？</span>
+                        <div class="faq__accordion-item">
+                            <div class="faq__content">
+                                <span class="faq__category">製品について</span>
+                                <span class="faq__question faq__text faq__question--fifth">特別な免許や資格は必要ですか？</span>
+                            </div>
                         </div>
-                        <img src="/assets/image/faq/faq_plus.png" class="faq__accordion-icon" alt="">
                     </div>
                     <div class="faq__accordion-content">
                         <div class="faq__accordion-body">
@@ -195,11 +205,12 @@
                 <div class="faq__accordion faq__accordion--sixth" role="button" tabindex="0" aria-expanded="false">
                     <div class="faq__accordion-q">
                         <span class="faq__text-q faq__text">Q.</span>
-                        <div class="faq__item">
-                            <span class="faq__category">使用について</span>
-                            <span class="faq__question faq__text">農業用ドローンの法規制は何ですか？</span>
+                        <div class="faq__accordion-item">
+                            <div class="faq__content">
+                                <span class="faq__category">使用について</span>
+                                <span class="faq__question faq__text">農業用ドローンの法規制は何ですか？</span>
+                            </div>
                         </div>
-                        <img src="/assets/image/faq/faq_plus.png" class="faq__accordion-icon" alt="">
                     </div>
                     <div class="faq__accordion-content">
                         <div class="faq__accordion-body">
@@ -212,11 +223,12 @@
                 <div class="faq__accordion faq__accordion--seventh" role="button" tabindex="0" aria-expanded="false">
                     <div class="faq__accordion-q">
                         <span class="faq__text-q faq__text">Q.</span>
-                        <div class="faq__item">
-                            <span class="faq__category">製品について</span>
-                            <span class="faq__question faq__text faq__question--seventh">農業用ドローンのバッテリー寿命は？</span>
+                        <div class="faq__accordion-item">
+                            <div class="faq__content">
+                                <span class="faq__category">製品について</span>
+                                <span class="faq__question faq__text faq__question--seventh">農業用ドローンのバッテリー寿命は？</span>
+                            </div>
                         </div>
-                        <img src="/assets/image/faq/faq_plus.png" class="faq__accordion-icon" alt="">
                     </div>
                     <div class="faq__accordion-content">
                         <div class="faq__accordion-body">
@@ -229,14 +241,15 @@
                 <div class="faq__accordion faq__accordion--eighth" role="button" tabindex="0" aria-expanded="false">
                     <div class="faq__accordion-q">
                         <span class="faq__text-q faq__text">Q.</span>
-                        <div class="faq__item">
-                            <div class="faq__categories">
-                                <span class="faq__category faq__category--first">使用について</span>
-                                <span class="faq__category">製品について</span>
+                        <div class="faq__accordion-item">
+                            <div class="faq__content">
+                                <div class="faq__categories">
+                                    <span class="faq__category faq__category--first">使用について</span>
+                                    <span class="faq__category">製品について</span>
+                                </div>
+                                <span class="faq__question faq__text">散布する薬剤や肥料の量はどのように制御されますか？</span>
                             </div>
-                            <span class="faq__question faq__text">散布する薬剤や肥料の量はどのように制御されますか？</span>
                         </div>
-                        <img src="/assets/image/faq/faq_plus.png" class="faq__accordion-icon" alt="">
                     </div>
                     <div class="faq__accordion-content">
                         <div class="faq__accordion-body">
@@ -249,11 +262,12 @@
                 <div class="faq__accordion faq__accordion--ninth" role="button" tabindex="0" aria-expanded="false">
                     <div class="faq__accordion-q">
                         <span class="faq__text-q faq__text">Q.</span>
-                        <div class="faq__item">
-                            <span class="faq__category faq__category--first">製品について</span>
-                            <span class="faq__question faq__text">データ収集や解析にはどのようなソフトウェアが使用されますか？</span>
+                        <div class="faq__accordion-item">
+                            <div class="faq__content">
+                                <span class="faq__category faq__category--first">製品について</span>
+                                <span class="faq__question faq__text">データ収集や解析にはどのようなソフトウェアが使用されますか？</span>
+                            </div>
                         </div>
-                        <img src="/assets/image/faq/faq_plus.png" class="faq__accordion-icon" alt="">
                     </div>
                     <div class="faq__accordion-content">
                         <div class="faq__accordion-body">
@@ -266,14 +280,15 @@
                 <div class="faq__accordion faq__accordion--tenth" role="button" tabindex="0" aria-expanded="false">
                     <div class="faq__accordion-q">
                         <span class="faq__text-q faq__text">Q.</span>
-                        <div class="faq__item">
-                            <div class="faq__categories">
-                                <span class="faq__category faq__category--first">使用について</span>
-                                <span class="faq__category">製品について</span>
+                        <div class="faq__accordion-item">
+                            <div class="faq__content">
+                                <div class="faq__categories">
+                                    <span class="faq__category faq__category--first">使用について</span>
+                                    <span class="faq__category">製品について</span>
+                                </div>
+                                <span class="faq__question faq__text">農業用ドローンはどのような気象条件で飛行できますか？</span>
                             </div>
-                            <span class="faq__question faq__text">農業用ドローンはどのような気象条件で飛行できますか？</span>
                         </div>
-                        <img src="/assets/image/faq/faq_plus.png" class="faq__accordion-icon" alt="">
                     </div>
                     <div class="faq__accordion-content">
                         <div class="faq__accordion-body">
@@ -286,14 +301,15 @@
                 <div class="faq__accordion faq__accordion--eleventh" role="button" tabindex="0" aria-expanded="false">
                     <div class="faq__accordion-q">
                         <span class="faq__text-q faq__text">Q.</span>
-                        <div class="faq__item">
-                            <div class="faq__categories">
-                                <span class="faq__category faq__category--first">ご利用について</span>
-                                <span class="faq__category">製品について</span>
+                        <div class="faq__accordion-item">
+                            <div class="faq__content">
+                                <div class="faq__categories">
+                                    <span class="faq__category faq__category--first">ご利用について</span>
+                                    <span class="faq__category">製品について</span>
+                                </div>
+                                <span class="faq__question faq__text">農業用ドローンのメンテナンスには何が必要ですか？</span>
                             </div>
-                            <span class="faq__question faq__text">農業用ドローンのメンテナンスには何が必要ですか？</span>
                         </div>
-                        <img src="/assets/image/faq/faq_plus.png" class="faq__accordion-icon" alt="">
                     </div>
                     <div class="faq__accordion-content">
                         <div class="faq__accordion-body">

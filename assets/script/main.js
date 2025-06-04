@@ -12,30 +12,9 @@ $(document).ready(function () {
     })
 
     // よくあるご質問
-    $('.faq__accordion-q').on('click', function () {
-        const $trigger = $(this);
-        const $icon = $trigger.find('.faq__accordion-icon');
-        const $content = $trigger.next();
-        const isExpanded = $trigger.attr('aria-expanded') === 'true';
-
-        // アコーディオン切り替え
-        $trigger.attr('aria-expanded', !isExpanded);
-        $content.toggleClass('open');
-
-        // 画像とサイズクラスの切り替え
-        if (isExpanded) {
-            // 閉じる → プラス画像に
-            $icon
-            .attr('src', '/assets/image/faq/faq_plus.png')
-            .removeClass('faq__icon--minus')
-            .addClass('faq__icon--plus');
-        } else {
-            // 開く → マイナス画像に
-            $icon
-            .attr('src', '/assets/image/faq/faq_minus.png')
-            .removeClass('faq__icon--plus')
-            .addClass('faq__icon--minus');
-        }
+    $('.faq__accordion').on('click', function () {
+        $(this).find('.faq__accordion-content').slideToggle(50);
+        $(this).toggleClass('faq__accordion-open');
     });
 
     // スワイパー

@@ -3,25 +3,25 @@
 /* メインビジュアル */
 .price-cover {
     margin-top: vw(63);
-    padding: vw(20) 0 vw(26) 0;
+    padding: vw(20) 0 vw(16) 0;
     @include mq() {
         margin-top: vwt(114);
-        padding: vwt(39) 0 vwt(47.4) 0;
+        padding: vwt(39) 0 vwt(19) 0;
     }
     @include mq(lg) {
         margin-top: px2Rem(114);
-        padding: px2Rem(39) 0 px2Rem(47.4) 0;
+        padding: px2Rem(39) 0 px2Rem(19) 0;
     }
     &__container {
         max-width: vw(360);
         margin-inline: auto;
         @include mq() {
-            max-width: vwt(1240);
+            max-width: vwt(1200);
             position: relative;
             text-align: center;
         }
         @include mq(lg) {
-            max-width: px2Rem(1240);
+            max-width: px2Rem(1200);
         }
     }
     &__image {
@@ -45,19 +45,19 @@
             font-size: vwt(36);
             margin-top: vwt(18.5);
             position: absolute;
-            bottom: vwt(35);
-            left: vwt(19.6);
+            bottom: vwt(-1);
+            left: vwt(-1);
             border-radius: 0 vwt(40) 0 0;
             background-color: #fff;
-            padding: vwt(23.2) vwt(34.4) vwt(31.8) vwt(40);
+            padding: vwt(23.2) vwt(32.8) vwt(28) vwt(41.6);
         }
         @include mq(lg) {
             font-size: px2Rem(36);
             margin-top: px2Rem(18.5);
-            bottom: px2Rem(35);
-            left: px2Rem(19.6);
+            bottom: px2Rem(-1);
+            left: px2Rem(-1);
             border-radius: 0 px2Rem(40) 0 0;
-            padding: px2Rem(23.2) px2Rem(34.4) px2Rem(31.8) px2Rem(40);
+            padding: px2Rem(23.2) px2Rem(32.8) px2Rem(28) px2Rem(41.6);
         }
     }
     &__text {
@@ -69,12 +69,15 @@
         }
     }
     &__breadcrumb {
-        margin-top: vw(16);
+        max-width: vw(360);
+        margin-inline: auto;
         @include mq() {
-            margin: vwt(18.9) vwt(18.2) 0 0;
+            max-width: vwt(1240);
+            padding-right: vwt(18);
         }
         @include mq(lg) {
-            margin: px2Rem(18.9) px2Rem(18.2) 0 0;
+            max-width: px2Rem(1240);
+            padding-right: px2Rem(18);
         }
     }
     &__ol {
@@ -130,12 +133,12 @@
 
 /* ギャラリー */
 .price-gallery {
-    padding: 0 0 vw(51.5) 0;
+    padding: vw(26) 0 vw(51.5) 0;
     @include mq() {
-        padding: 0 0 vwt(59.5) 0;
+        padding: vwt(47) 0 vwt(59.5) 0;
     }
     @include mq(lg) {
-        padding: 0 0 px2Rem(59.5) 0;
+        padding: px2Rem(47) 0 px2Rem(59.5) 0;
     }
     &__container {
         max-width: vw(358);
@@ -344,10 +347,10 @@
 .price-spec {
     padding: 0 0 vw(64) 0;
         @include mq() {
-            padding: 0 0 vwt(70.8) 0;
+            padding: 0 0 vwt(71.7) 0;
         }
         @include mq(lg) {
-            padding: 0 0 px2Rem(70.8) 0;
+            padding: 0 0 px2Rem(71.7) 0;
         }
     &__container {
         max-width: vw(358);
@@ -519,7 +522,7 @@
         transition: background-color 0.3s, color 0.3s;
         @include mq() {
             max-width: vwt(358);
-            padding: vwt(20.3) 0 vwt(22) 0;
+            padding: vwt(20) 0;
             border: vwt(2) solid #fff;
             border-radius: vwt(40);
             font-size: vwt(20);
@@ -527,7 +530,7 @@
         }
         @include mq(lg) {
             max-width: px2Rem(358);
-            padding: px2Rem(20.3) 0 px2Rem(22) 0;
+            padding: px2Rem(20) 0;
             border: px2Rem(2) solid #fff;
             border-radius: px2Rem(40);
             font-size: px2Rem(20);
