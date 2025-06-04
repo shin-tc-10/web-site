@@ -199,16 +199,18 @@
                 background-size: contain;
                 background-repeat: no-repeat;
                 height: vw(19);
-                width: vw(19);
+                width: vw(20);
                 flex-shrink: 0;
                 margin-top: vw(4);
                 @include mq() {
                     height: vwt(19);
-                    width: vwt(19);
+                    width: vwt(20);
+                    margin-top: vwt(4);
                 }
                 @include mq(lg) {
                     height: px2Rem(19);
-                    width: px2Rem(19);
+                    width: px2Rem(20);
+                    margin-top: px2Rem(4);
                 }
             }
         }

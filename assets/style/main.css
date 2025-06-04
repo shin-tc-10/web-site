@@ -2281,20 +2281,22 @@ li {
     background-size: contain;
     background-repeat: no-repeat;
     height: 4.8717948718vw;
-    width: 4.8717948718vw;
+    width: 5.1282051282vw;
     flex-shrink: 0;
     margin-top: 1.0256410256vw;
 }
 @media screen and (min-width: 768px) {
     .faq__accordion-item::after {
         height: 1.5322580645vw;
-        width: 1.5322580645vw;
+        width: 1.6129032258vw;
+        margin-top: 0.3225806452vw;
     }
 }
 @media screen and (min-width: 1240px) {
     .faq__accordion-item::after {
         height: 1.1875rem;
-        width: 1.1875rem;
+        width: 1.25rem;
+        margin-top: 0.25rem;
     }
 }
 .faq__accordion-open .faq__accordion-item::after {

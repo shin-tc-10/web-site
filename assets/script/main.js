@@ -13,7 +13,7 @@ $(document).ready(function () {
 
     // よくあるご質問
     $('.faq__accordion').on('click', function () {
-        $(this).find('.faq__accordion-content').slideToggle(50);
+        $(this).find('.faq__accordion-content').slideToggle(500);
         $(this).toggleClass('faq__accordion-open');
     });
 
