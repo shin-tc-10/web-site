@@ -166,6 +166,7 @@
             display: flex;
             align-items: flex-start;
             padding: vw(23) vw(24) vw(17) vw(23);
+            transition: padding 0.5s ease;
             &--second {
                 padding-top: vw(23);
             }
@@ -231,12 +232,12 @@
             }
         }
         &-open &-q {
-            padding: vw(23) vw(24) 0 vw(23);
+            padding-bottom: 0;
             @include mq() {
-                padding: vwt(22.79) vwt(31) vwt(15) vwt(31);
+                padding-bottom: vwt(15);
             }
             @include mq(lg) {
-                padding: px2Rem(22.79) px2Rem(31) px2Rem(15) px2Rem(31);
+                padding-bottom:px2Rem(15);
             }
         }
     }

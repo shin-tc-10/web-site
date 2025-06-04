@@ -2239,6 +2239,7 @@ li {
     display: flex;
     align-items: flex-start;
     padding: 5.8974358974vw 6.1538461538vw 4.358974359vw 5.8974358974vw;
+    transition: padding 0.5s ease;
 }
 .faq__accordion-q--second {
     padding-top: 5.8974358974vw;
@@ -2320,16 +2321,16 @@ li {
     }
 }
 .faq__accordion-open .faq__accordion-q {
-    padding: 5.8974358974vw 6.1538461538vw 0 5.8974358974vw;
+    padding-bottom: 0;
 }
 @media screen and (min-width: 768px) {
     .faq__accordion-open .faq__accordion-q {
-        padding: 1.8379032258vw 2.5vw 1.2096774194vw 2.5vw;
+        padding-bottom: 1.2096774194vw;
     }
 }
 @media screen and (min-width: 1240px) {
     .faq__accordion-open .faq__accordion-q {
-        padding: 1.424375rem 1.9375rem 0.9375rem 1.9375rem;
+        padding-bottom: 0.9375rem;
     }
 }
 .faq__text {
