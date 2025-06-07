@@ -319,7 +319,7 @@
             padding: 0 0 px2Rem(18.7) 0;
         }
     }
-    &__price {
+    &__price-tax {
         font-size: vw(32);
         font-weight: bold;
         font-family: "Montserrat", sans-serif;
@@ -329,6 +329,9 @@
         @include mq(lg) {
             font-size: px2Rem(32);
         }
+    }
+    &__price {
+        color: #168352;
     }
     &__tax {
         font-size: vw(16);
