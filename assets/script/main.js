@@ -11,6 +11,10 @@ $(document).ready(function () {
         $('.header__sp-nav').removeClass('header__active');
     })
 
+    $(window).on('resize', function() {
+        $('.header__sp-nav').removeClass('header__active');
+    });
+
     // よくあるご質問
     $('.faq__accordion').on('click', function () {
         $(this).find('.faq__accordion-content').slideToggle(500);

@@ -92,7 +92,7 @@
     &__heading {
         line-height: 1.4;
         text-align: center;
-        margin-bottom: vw(52.58);
+        margin-bottom: vw(20);
         @include mq() {
             line-height: 1.6;
             margin-bottom: vwt(24);
@@ -111,6 +111,7 @@
         }
     }
     &__content {
+        position: relative;
         @include mq() {
             display: flex;
             justify-content: space-between;
@@ -120,6 +121,21 @@
             padding: 0 px2Rem(29.7) 0 px2Rem(15.5);
         }
     }
+    &__image {
+        width: 100%;
+        height: vw(545);
+        z-index: -1;
+        @include mq() {
+            width: vwt(390);
+            height: vwt(570);
+            padding: 0;
+            margin-top: 0;
+        }
+        @include mq(lg) {
+            width: px2Rem(390);
+            height: px2Rem(570);
+        }
+    }
     &__description {
         background-color: #fff;
         opacity: 0.8;
@@ -127,11 +143,16 @@
         max-width: vw(358);
         margin-inline: auto;
         padding: vw(13.85) 0 vw(18) 0;
+        position: absolute;
+        top: 6%;
+        left: 4%;
         @include mq() {
+            position: static;
             margin: vwt(100.7) 0;
             opacity: 1;
             padding: 0;
             max-width: vwt(415);
+            order: 1;
         }
         @include mq(lg) {
             padding: 0;
@@ -169,27 +190,13 @@
             font-size: px2Rem(15);
         }
     }
-    &__image {
-        background-image: url("/assets/image/top/about_us_sp.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
-        padding: vw(32) 0;
-        width: 100%;
-        height: vw(545);
-        position: relative;
-        z-index: -1;
-        margin-top: vw(-513);
+    &__image-wrapper {
         @include mq() {
-            background-image: url("/assets/image/top/about_us_pc.jpg");
-            width: vwt(390);
-            height: vwt(570);
-            padding: 0;
-            margin-top: 0;
+            position:relative;
+            order: 2;
         }
         @include mq(lg) {
-            width: px2Rem(390);
-            height: px2Rem(570);
+            order: 2;
         }
     }
     &__line-break {
@@ -349,21 +356,18 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: vw(20) vw(23) vw(20) vw(24);
         border-radius: vw(24);
         margin-bottom: vw(20);
         color: #fff;
         cursor: pointer;
         @include mq() {
             width: vwt(525);
-            padding: vwt(23) vwt(31);
             border-radius: vwt(24);
             margin-bottom: vwt(40);
             margin-right: vwt(49);
         }
         @include mq(lg) {
             width: px2Rem(525);
-            padding: px2Rem(23) px2Rem(31);
             border-radius: px2Rem(24);
             margin-bottom: px2Rem(40);
             margin-right: px2Rem(49);
@@ -373,12 +377,10 @@
                 width: vwt(333);
                 margin-bottom: 0;
                 margin-right: vwt(49.95);
-                padding: vwt(20) vwt(23) vwt(20) vwt(24.7);
             }
             @include mq(lg) {
                 width: px2Rem(333);
                 margin-right: px2Rem(49.95);
-                padding: px2Rem(20) px2Rem(23) px2Rem(20) px2Rem(24.7);
             }
         }
         &--second {
@@ -495,6 +497,21 @@
         color: inherit;
         width: 100%;
         height: 100%;
+        padding: vw(20) vw(23) vw(20) vw(24);
+        @include mq() {
+            padding: vwt(23) vwt(31);
+        }
+        @include mq(lg) {
+            padding: px2Rem(23) px2Rem(31);
+        }
+        &--small {
+            @include mq() {
+                padding: vwt(20) vwt(23) vwt(20) vwt(24.7);
+            }
+            @include mq(lg) {
+                padding: px2Rem(20) px2Rem(23) px2Rem(20) px2Rem(24.7);
+            }
+        }
     }
 }
 
