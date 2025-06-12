@@ -1612,6 +1612,7 @@ li {
 @media screen and (min-width: 768px) {
     .price-gallery__image {
         height: auto;
+        border-radius: 0;
     }
 }
 
